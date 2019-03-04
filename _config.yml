@@ -10,6 +10,7 @@ google_analytics: false
 google_site_verification: false
 
 jekyll_wgdd:
+  skin: 'default'
   mobile:
   - theme_color: "#FF00FF"
 
