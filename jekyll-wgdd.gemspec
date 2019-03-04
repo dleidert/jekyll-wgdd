@@ -6,9 +6,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Daniel Leidert"]
   spec.email         = ["daniel.leidert@wgdd.de"]
 
-  spec.summary       = "TODO: Write a short summary, because Rubygems requires one."
+  spec.summary       = "Private jekyll theme for a private blog"
   spec.homepage      = "https://github.com/dleidert/jekyll-wgdd"
-  spec.license       = "UNLICENSE"
+  spec.license       = "Unlicense"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README)!i) }
 
