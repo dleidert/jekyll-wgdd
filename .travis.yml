@@ -2,13 +2,44 @@ language: ruby
 
 sudo: false
 
-cache: bundler
+cache:
+  apt: true
+  bundler: true
+  directories:
+  - $TRAVIS_BUILD_DIR/tmp/.htmlproofer
+
+notifications:
+  email:
+    on_success: never
 
 branches:
-  only: master
+  only:
+  - master
+  - gh-pages
+
+env:
+  global:
+  - JEKYLL_ENV=production
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+
+addons:
+  apt:
+    packages:
+    - libcurl4-openssl-dev
 
 rvm:
+- 2.1
+- 2.3
 - 2.4
 - 2.5
 
-script: bundle exec jekyll build
+script: 
+- bundle exec jekyll build --trace
+- bundle exec htmlproofer ./_site
+  --check-external-hash
+  --check-opengraph
+  --check-sri
+  --check-html
+  --check-img-http
+  --enforce-https
+  --timeframe 6w
