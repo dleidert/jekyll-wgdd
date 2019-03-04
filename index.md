@@ -15,3 +15,8 @@ Text
 ## Header 1.2
 
 Text
+
+```YAML
+title: Title
+description: foobar
+```
