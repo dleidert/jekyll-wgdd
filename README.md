@@ -1,2 +1,2 @@
-# www.wgdd.de
-Private blog
+# jekyll-wgdd
+Private jekyll theme
