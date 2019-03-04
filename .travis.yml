@@ -5,7 +5,9 @@ sudo: false
 cache: bundler
 
 branches:
-  only: master
+  only:
+  - master
+  - gh-pages
 
 rvm:
 - 2.4
