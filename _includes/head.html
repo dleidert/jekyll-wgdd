@@ -1,4 +1,4 @@
-{%- assign conf = site.jekyll_wgdd.site_conf -%}
+{%- assign conf = site.jekyll_wgdd -%}
 <head>
   <meta charset="utf-8">
   {% if conf.expires -%}
@@ -6,7 +6,7 @@
   {%- endif -%}
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% if conf.mobile[theme_color] -%}
-  <meta name="theme-color" content="{{ html.theme-color }}">
+  <meta name="theme-color" content="{{ conf.mobile[theme_color] }}">
   {%- endif -%}
   <link rel="stylesheet" type="text/css" href="{{ '/assets/css/main.css' | relative_url }}">
   <!--
