@@ -1,0 +1,27 @@
+title: Site title
+author: GitHub User
+email: user@github.com
+description: >
+  Site description
+
+show_excerpts: false
+
+google_analytics: false
+google_site_verification: false
+
+jekyll_wgdd:
+  mobile:
+  - theme_color: "#FF00FF"
+
+include:
+- .htaccess
+- _pages
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
