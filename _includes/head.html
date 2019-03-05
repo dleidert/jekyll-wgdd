@@ -5,7 +5,7 @@
   <meta name="date" content="{{ site.time | date_to_xmlschema }}">
   {%- endif -%}
   {% if conf.expires -%}
-  <meta http-equiv="expires" content="{{ html.expires }}">
+  <meta http-equiv="expires" content="{{ conf.expires }}">
   {%- endif -%}
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% if conf.mobile.theme_color -%}

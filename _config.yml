@@ -15,7 +15,7 @@ jekyll_wgdd:
   site_conf:
     skin: 'default'
     debug: false
-    expires: 10
+    expires: false
     mobile:
       theme_color: "#CC0033"
 
