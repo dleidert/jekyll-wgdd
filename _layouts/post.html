@@ -27,6 +27,12 @@ layout: default
   </aside>
 
   <footer class="post-footer">
+    {% if page.tags -%}
+    <p class="post-tags-label" id="post-tags-label">Tags</p>
+    <ul class="post-tags" aria-labelledby="post-tags-label">
+      {% for tag in page.tags -%}<li>{{ tag }}</li>{%- endfor %}
+    </ul>
+    {% endif -%}
     <!-- list of categories -->
     <nav class="post-footer-navigation">
       <ul>
