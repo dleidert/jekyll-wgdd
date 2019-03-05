@@ -13,4 +13,4 @@ jekyll_wgdd:
   site_conf:
     expires: 10
     mobile:
-    - theme_color: #AA0000
+      theme_color: #AA0000
