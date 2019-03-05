@@ -14,4 +14,4 @@ jekyll_wgdd:
     debug: true
     expires: 10
     mobile:
-      theme_color: "#AA0000"
+      theme_color: "#0066ff"
