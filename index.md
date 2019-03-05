@@ -20,3 +20,7 @@ Text
 title: Title
 description: foobar
 ```
+
+```JSON
+{{ site | neat_json }}
+```
