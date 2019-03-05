@@ -4,7 +4,7 @@ layout: default
 
 {%- assign date_format = site.jekyll_wgdd.site_conf.date_format | default: "%Y-%m-%d %H:%M" -%}
 
-<article class="post" aria-labelledby="post-title" itemscope itemtype="http://schema.org/BlogPosting" itemid="{{ site.url }}">
+<article class="post" aria-labelledby="post-title" itemscope itemtype="http://schema.org/BlogPosting" itemid="{{ page.url | absolute_url }}">
 
   <header class="post-header">
     <h1 class="post-title" id="post-title" itemprop="headline">{{ page.title | escape }}</h1>
@@ -28,7 +28,7 @@ layout: default
 
   <footer class="post-footer">
     <!-- list of categories -->
-    <a class="post-url hidden-url" href="{{ page.url }}" itemprop="url" hidden>{{ page.url }}</a>
+    <a class="post-url hidden-url" href="{{ page.url }}" itemprop="url" hidden>{{ page.url | absolute_url }}</a>
   </footer>
 
 </article>
