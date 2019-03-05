@@ -14,6 +14,7 @@ google_site_verification: false
 jekyll_wgdd:
   site_conf:
     skin: 'default'
+    debug: false
     expires: 10
     mobile:
       theme_color: "#CC0033"
