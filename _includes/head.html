@@ -5,8 +5,8 @@
   <meta http-equiv="expires" content="{{ html.expires }}">
   {%- endif -%}
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {% if conf.mobile[theme_color] -%}
-  <meta name="theme-color" content="{{ conf.mobile[theme_color] }}">
+  {% if conf.mobile[0].theme_color -%}
+  <meta name="theme-color" content="{{ conf.mobile[0].theme_color }}">
   {%- endif -%}
   <link rel="stylesheet" type="text/css" href="{{ '/assets/css/main.css' | relative_url }}">
   <!--
