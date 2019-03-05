@@ -1,0 +1,123 @@
+/*************************************
+ * TITLE: Debian wgdd.de Stylesheet  *
+ * URI  : /css/screen.css            *
+ * MODIF: Sat Nov 22 17:14:13 2008   *
+ *************************************/
+
+html {
+  font-size: 100.01%;
+}
+
+body {
+  color: black;
+  background-color: rgb(240,240,240);
+  /* 'Bitstream Vera Sans' */
+  font-family: verdana, helvetica, arial, sans-serif;
+  font-size: 0.85em;
+  margin: 0;
+  padding: 0;
+}
+
+.page-header {
+  background-color: rgb(140,170,230);
+  color: rgb(39,78,144);
+  height: 56px;
+}
+
+.page-header .page-banner a {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.page-header .page-banner a img {
+  border: none;
+  /*height: 4em; */
+  height: 56px;
+  vertical-align: middle;
+  z-index: -1;
+}
+
+.page-title {
+  font-family: 'Comic Sans MS', 'Bitstream Vera Sans', verdana, helvetica, arial, sans-serif;
+  /* font-size: 2.5em; */
+  font-size: 35px;
+  font-weight: normal;
+  margin: 0 0 0 5px;
+  padding: 0.1em 0;
+}
+
+/* Site Navigation */
+
+.page-navigation {
+  background-color: rgb(0,51,153);
+  clear: both; /* konqueror workaround */
+  color: white;
+  float: left; /* konqueror workaround */
+  margin: 0;
+  padding: 5px 2px 5px 0;
+  width: 100%;
+}
+
+.page-navigation-title {
+  display: none;
+}
+
+.page-navigation a {
+  background-color: transparent;
+  font-weight: bold;
+  margin: 0;
+  padding: 0 5px 0 0;
+  text-decoration: none;
+  color: white;
+}
+
+.page-navigation a:hover {
+  text-decoration: underline;
+}
+
+.page-navigation ul#page-navigation {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0 5px;
+  text-align: center;
+}
+
+.page-navigation ul#page-navigation li {
+  display: inline;
+  /* float: left; */
+  font-weight: bold;
+  list-style: none;
+  margin: 0;
+  padding: 0.1em 1em 0.1em 0;  /* Circumvents a rendering bug (?) in MSIE 6.0 */
+  text-align: left;
+  /* width: 7em; */
+}
+
+.page-navigation ul#page-navigation a {
+  background-color: transparent;
+  text-decoration: none;
+  color: rgb(255,255,255);
+}
+
+.page-navigation ul#page-navigation a:hover,
+.page-navigation ul#page-navigation span.thisPage {
+  background-color: transparent;
+  color: rgb(253,160,91);
+  text-decoration: none;
+}
+
+.page-navigation img {
+  border: none;
+  float: right;
+  height: 0.95em;
+  margin: 0;
+  padding: 0 5px 0 0;
+  vertical-align: middle;
+}
+
+.page-navigation-sublist {
+  display: none;
+}
+
