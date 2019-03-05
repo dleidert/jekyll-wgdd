@@ -4,5 +4,5 @@
 
 @charset "utf-8";
 
-@import "jekyll-wgdd/skins/{{ site.jekyll_wgdd.skin | default: 'default' }}";
+@import "jekyll-wgdd/skins/{{ site.jekyll_wgdd.site_conf.skin | default: 'default' }}";
 @import "jekyll-wgdd";
