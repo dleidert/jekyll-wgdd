@@ -28,7 +28,17 @@ layout: default
 
   <footer class="post-footer">
     <!-- list of categories -->
-    <a class="post-url hidden-url" href="{{ page.url }}" itemprop="url" hidden>{{ page.url | absolute_url }}</a>
+    <nav class="post-footer-navigation">
+      <ul>
+      {% if page.previous -%}
+        <li><a class="next-url"href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a></li>
+      {% endif -%}
+        <li><a class="post-url hidden-url" href="{{ page.url }}" itemprop="url" hidden>{{ page.url | absolute_url }}</a></li>
+      {% if page.next -%}
+        <li><a class="next-url"href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a></li>
+      {% endif -%}
+      </ul>
+    </nav>
   </footer>
 
 </article>
