@@ -2,4 +2,24 @@
 layout: default
 ---
 
-{{ content }}
+{%- assign date_format = site.jekyll_wgdd.site_conf.date_format | default: "%Y-%m-%d %H:%M" -%}
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting" itemid="{{ site.url }}">
+
+  <header class="post-header">
+    <h1 class="post-title" id="page-label" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-">Published
+    {% if page.author -%}
+      by
+      <span class="post-author" itemscope itemtype="http://schema.org/Person" itemprop="author name">{{ page.author }}</span>
+    {% endif -%}
+      at
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: date_format }}</time>
+    </p>
+  </header>
+
+  <div class="post-content" itemprop="text articleBody">
+    {{ content }}
+  </div>
+
+</article>
