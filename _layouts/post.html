@@ -11,7 +11,7 @@ layout: default
     <p class="post-">Published
     {% if page.author -%}
       by
-      <span class="post-author" itemscope itemtype="http://schema.org/Person" itemprop="author name">{{ page.author }}</span>
+      <span class="post-author" itemscope itemtype="http://schema.org/Person" itemprop="author name">{{ page.author | default: site.author }}</span>
     {% endif -%}
       at
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: date_format }}</time>
