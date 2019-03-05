@@ -22,5 +22,5 @@ description: foobar
 ```
 
 ```JSON
-{{ site | neat_json }}
+{{ site.jekyll_wgdd | neat_json }}
 ```
