@@ -12,6 +12,5 @@ google_site_verification:
 jekyll_wgdd:
   site_conf:
     debug: true
-    expires: 10
     mobile:
       theme_color: "#0066ff"
