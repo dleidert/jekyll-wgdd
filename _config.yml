@@ -12,9 +12,11 @@ google_analytics: false
 google_site_verification: false
 
 jekyll_wgdd:
-  skin: 'default'
-  mobile:
-    theme_color: "#FF00FF"
+  site_conf:
+    skin: 'default'
+    expires: 10
+    mobile:
+      theme_color: "#CC0033"
 
 include:
 - .htaccess
