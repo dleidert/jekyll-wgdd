@@ -1,0 +1,14 @@
+main:
+  - title: 
+    url: 
+  - url: about.md # use title from page.title
+  - url: debian.md
+    pages:
+    - url: debian/hardware.md
+      title: "Hardware of Debian"
+    - url: debian/me.md
+  - title: Sitemap
+    url: /sitemap/
+    
+  - title:
+    
