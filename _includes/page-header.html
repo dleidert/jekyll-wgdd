@@ -1,0 +1,10 @@
+<header class="page-header" id="page-label">
+  <h1 class="page-title" id="page-title">{{ site.title }} :: {% if page.layout != 'post' -%}{{ page.title }}{%- else -%}Blog{%- endif -%}</h1>
+  <span class="page-banner">
+    <a href="http://www.debian.org" title="Debian GNU/Linux Project">
+      <img src="http://www.debian.org/banners/debian.png" alt="Debian GNU/Linux Project - www.debian.org"/>
+    </a>
+  </span>
+</header>
+
+{% include page-navigation.html scope="sites" %}
