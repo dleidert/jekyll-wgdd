@@ -22,6 +22,7 @@ main:
     - url: topicc2.md # use title from page.title
     - url: topicc3.md # use title from page.title
   - title: 'No link'
+    sub:
     - url: '#a'
       title: "Related Topic"
     - url: '#b' # no title?
