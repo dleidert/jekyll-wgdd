@@ -1,0 +1,18 @@
+{%- unless include.entry.url contains '://' -%}
+  {%- if include.entry.url -%}
+    {%- comment -%}
+      If include.entry.url==nil ... thispage = site.pages!
+      Thus we need the surrounding check here!
+    {%- endcomment -%}
+    {%- assign thispage = site.pages | where: "path", include.entry.url | first -%}
+  {%- endif -%}
+  {%- if thispage.url -%}
+    {{ thispage.url | relative_url }}
+  {%- elsif include.entry.url -%}
+    {{ include.entry.url }}
+  {%- else -%}
+    #
+  {%- endif -%}
+{%- else -%}
+  {{ include.entry.url }}
+{%- endunless -%}

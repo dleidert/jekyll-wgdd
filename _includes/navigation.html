@@ -8,11 +8,11 @@
 {%- if nav %}
   <ul class="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-list">
 {%- for item in nav %}
-    <li><a href="">{%- include navigation-title.html entry=item -%}</a>
+    <li><a href="{%- include navigation-url.html entry=item -%}">{%- include navigation-title.html entry=item -%}</a>
 {%- if item.sub %}
       <ul class="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-sublist">
 {%- for sub in item.sub %}
-        <li><a href="">{%- include navigation-title.html entry=sub -%}</a></li>
+        <li><a href="{%- include navigation-url.html entry=sub -%}">{%- include navigation-title.html entry=sub -%}</a></li>
 {%- endfor %}
       </ul>
 {%- endif -%}
