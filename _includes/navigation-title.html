@@ -1,0 +1,10 @@
+{%- unless include.entry.title -%}
+  {%- assign thispage = site.pages | where: "path", include.entry.url | first -%}
+  {%- unless thispage.title -%}
+    Unknown
+  {%- else -%}
+    {{ thispage.title }}
+  {%- endunless -%}
+{%- else -%}
+  {{ include.entry.title }}
+{%- endunless -%}

@@ -1,11 +1,23 @@
 {% assign nav = site.data.navigation[include.scope] -%}
 
-  <nav class="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}"
-       aria-labelledby="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-title">
-    <h2 class="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-title"
-        id="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-title"
-        >Page {%- if include.scope -%}{{ include.scope }}{%- endif -%} Navigation</h2>
-    <ul class="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-list">
-      <!-- TODO -->
-    </ul>
-  </nav>
+<nav class="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}"
+     aria-labelledby="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-title">
+  <button class="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-title"
+          id="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-title"
+          >Open {%- if include.scope -%}{{ include.scope }}{%- endif -%} Page Navigation</button>
+{%- if nav %}
+  <ul class="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-list">
+{%- for item in nav %}
+    <li><a href="">{%- include navigation-title.html entry=item -%}</a>
+{%- if item.sub %}
+      <ul class="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-sublist">
+{%- for sub in item.sub %}
+        <li><a href="">{%- include navigation-title.html entry=sub -%}</a></li>
+{%- endfor %}
+      </ul>
+{%- endif -%}
+    </li>
+{%- endfor %}
+  </ul>
+{%- endif %}
+</nav>
