@@ -1,5 +1,11 @@
-<nav class="page-navigation" aria-labelledby="page-navigation-title">
-  <h2 class="page-navigation-title" id="page-navigation-title">Page Navigation</h2>
-  <ul id="page-navigation">
-  </ul>
-</nav>
+{% assign nav = site.data.navigation[include.scope] -%}
+
+  <nav class="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}"
+       aria-labelledby="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-title">
+    <h2 class="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-title"
+        id="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-title"
+        >Page {%- if include.scope -%}{{ include.scope }}{%- endif -%} Navigation</h2>
+    <ul class="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-list">
+      <!-- TODO -->
+    </ul>
+  </nav>

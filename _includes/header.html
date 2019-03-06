@@ -5,6 +5,13 @@
       <img src="http://www.debian.org/banners/debian.png" alt="Debian GNU/Linux Project - www.debian.org"/>
     </a>
   </span>
-</header>
 
-{% include navigation.html scope="sites" %}
+{% if site.data.navigation["folder"] %}
+{% include navigation.html scope="folder" %}
+{% endif %}
+
+{% if site.data.navigation["main"] %}
+{% include navigation.html scope="main" %}
+{% endif %}
+
+</header>

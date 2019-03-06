@@ -1,12 +1,23 @@
 main:
-  - url: index.md
-    title: Index
+  - url: subjetcta.md
+    title: 'Subject a'
+  - url: blog.md # use title from page.title
   - url: about.md # use title from page.title
-  - url: debian.md
-    title: Debian
-    sub:
-    - url: debian/hardware.md
-      title: "Hardware"
-    - url: debian/me.md # use title from page.title
   - url: /sitemap/
     title: Sitemap
+
+folder:
+  - url: topica.md
+    title: 'Topic a'
+    sub:
+    - url: topica/a.md
+      title: "Related Topic"
+    - url: topica/b.md # use title from page.title
+  - url: topicb.md
+    title: 'Topic b'
+  - url: topicc.md # use title from page.title
+    sub:
+    - url: topicc1.md
+      title: "Related Topic"
+    - url: topicc2.md # use title from page.title
+    - url: topicc3.md # use title from page.title
