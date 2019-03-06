@@ -21,3 +21,16 @@ main:
       title: "Related Topic"
     - url: topicc2.md # use title from page.title
     - url: topicc3.md # use title from page.title
+  - title: 'No link'
+    - url: '#a'
+      title: "Related Topic"
+    - url: '#b' # no title?
+    - title: 'Foobar' # no link?
+
+footer:
+  - url:
+    title: contact
+  - url:
+    title: dsgvo
+  - url:
+    title: imprint
