@@ -6,12 +6,12 @@
     </a>
   </span>
 
-{% if site.data.navigation["folder"] %}
-{% include navigation.html scope="folder" %}
+{% if site.data.navigation["head"] %}
+{% include navigation.html scope="head" %}
 {% endif %}
+
+</header>
 
 {% if site.data.navigation["main"] %}
 {% include navigation.html scope="main" %}
 {% endif %}
-
-</header>

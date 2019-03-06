@@ -1,4 +1,4 @@
-main:
+head:
   - url: subjetcta.md
     title: 'Subject a'
   - url: blog.md # use title from page.title
@@ -6,7 +6,7 @@ main:
   - url: /sitemap/
     title: Sitemap
 
-folder:
+main:
   - url: topica.md
     title: 'Topic a'
     sub:
