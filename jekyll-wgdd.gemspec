@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/dleidert/jekyll-wgdd"
   spec.license       = "Unlicense"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README)!i) }
+  spec.files         = Dir["{assets,_data,_includes,_layouts,_sass}/**/*"] + Dir["**/*.md"] + ["LICENSE", "README.md"]
 
   spec.add_runtime_dependency "jekyll", "~> 3.8"
 
