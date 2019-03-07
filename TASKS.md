@@ -7,6 +7,11 @@ One item for every day
 - [ ] Finish a task daily
 - [ ] Add a task daily
 
+## Blog
+
+- [ ] Print a list of blog posts
+- [ ] Add pagination support
+- [ ] Add list of 3-4 related posts
 
 ## Microdada
 
@@ -30,3 +35,9 @@ One item for every day
 ## Footer
 
 - [ ] Add navlist with social links
+
+## TRAVIS CI
+
+- [ ] Enable travis-ci support
+- [ ] Build the theme gem
+- [ ] Build the github pages
