@@ -24,5 +24,8 @@ header:
 
 footer:
 - title: Kontakt
+  url: /contact/#kontakt
 - title: DSGVO
+  url: /contact/#dsgvo
 - title: Impressum
+  url: /contact/#impressum
