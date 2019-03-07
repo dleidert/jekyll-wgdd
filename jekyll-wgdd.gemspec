@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/dleidert/jekyll-wgdd"
   spec.license       = "Unlicense"
 
-  spec.files         = Dir["{assets,_data,_includes,_layouts,_sass}/**/*"] + Dir["**/*.md"] + ["LICENSE", "README.md"]
+  spec.files         = Dir["{assets,_data,_includes,_layouts,_sass}/**/*"] + ["LICENSE", "README.md"]
 
   spec.add_runtime_dependency "jekyll", "~> 3.8"
 
