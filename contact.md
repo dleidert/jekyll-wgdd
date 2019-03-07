@@ -1,18 +1,18 @@
 ---
 layout: page
-title: Kontakt, Datenschutzbestimmungen und Impressum
+title: Contact, Privacy, Impressum / Legal Notice
 description: >
-  Kontakt, Datenschutzbestimmungen und Impressum
+  Contact information, privacy declaration and impressum - legal notice.
 ---
 
-## Kontakt
+## Contact
 
 ...
 
-## DSGVO
+## Privacy
 
 ...
 
-## Impressum
+## Impressum / Legal notice
 
 ...

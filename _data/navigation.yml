@@ -31,8 +31,8 @@ header:
 
 footer:
 - title: Kontakt
-  url: /contact/#kontakt
+  url: /contact/#contact
 - title: DSGVO
-  url: /contact/#dsgvo
+  url: /contact/#privacy
 - title: Impressum
-  url: /contact/#impressum
+  url: /contact/#impressum-legal-notice
