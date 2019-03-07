@@ -15,7 +15,7 @@
 {%- elsif this_page.url -%}
   {%- assign this_url = this_page.url | relative_url -%}
 {%- elsif include.entry.url -%}
-  {%- assign this_url = include.entry.url -%}
+  {%- assign this_url = include.entry.url | relative_url -%}
 {%- endif -%}
 
 {%- comment -%} Determine title {%- endcomment -%}
