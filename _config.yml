@@ -1,18 +1,30 @@
-remote_theme: dleidert/jekyll-wgdd
+theme: jekyll-wgdd
+
 title: "[erfahrungen, meinungen, halluzinationen]"
 description: "ein kleines, privates blog"
 lang: en
 
+show_excerpts: false
+
 author: Daniel Leidert
 email: daniel.leidert@wgdd.de
 
-google_analytics:
-google_site_verification:
+google_analytics: false
+google_site_verification: false
 
 permalink: pretty
 
 jekyll_wgdd:
   site_conf:
+    skin: 'default'
     debug: true
+    expires: false
     mobile:
-      theme_color: "#0066ff"
+      theme_color: "#CC0033"
+
+plugins:
+- jekyll-feed
+- jekyll-paginate
+#- jekyll-redirect-from
+- jekyll-seo-tag
+- jekyll-sitemap
