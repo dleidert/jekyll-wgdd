@@ -1,3 +1,6 @@
 <footer class="page-footer">
-<!-- collection: contact(left), dsgvo(left), imprint(left), copyright-string -->
+{% if site.data.navigation["footer"] %}
+{% include navigation.html scope="footer" %}
+{% endif %}
+<small>Copyright {{ site.author }}</small>
 </footer>
