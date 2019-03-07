@@ -1,0 +1,30 @@
+main:
+- url: debian.md
+  title: My Debian
+  sub:
+  - url: debian/blog.md
+    title: My Debian blog
+  - url: debian/packages.md
+    title: My Packages
+  - url: debian/hardware.md
+    title: My Hardware
+- url: projects.md
+  title: My projects
+  sub:
+  - url: /bde-lock/
+    title: bde-lock
+  - url: /jekyll-wgdd/
+    title: Jekyll theme
+
+header:
+- url: blog.md
+  title: Blog
+- url: projects.md
+  title: Software
+- url: about.md
+  title: About me
+
+footer:
+- title: Kontakt
+- title: DSGVO
+- title: Impressum
