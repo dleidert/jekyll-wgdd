@@ -1,0 +1,46 @@
+{%- comment -%} Empty variables {%- endcomment -%}
+{%- assign this_page = nil -%}
+{%- assign this_url = nil -%}
+{%- assign this_url = nil -%}
+
+{%- comment -%} If include.entry.url==nil ... thispage = site.pages! {%- endcomment -%}
+{%- if include.entry.url -%}
+  {%- comment -%}If include.entry.url==nil ... thispage = site.pages!{%- endcomment -%}
+  {%- assign this_page = site.pages | where: "path", include.entry.url | first -%}
+{%- endif -%}
+
+{%- comment -%} Determine URL {%- endcomment -%}
+{%- if include.entry.url contains '://' -%}
+  {%- assign this_url = include.entry.url -%}
+{%- elsif this_page.url -%}
+  {%- assign this_url = this_page.url | relative_url -%}
+{%- elsif include.entry.url -%}
+  {%- assign this_url = include.entry.url -%}
+{%- endif -%}
+
+{%- comment -%} Determine title {%- endcomment -%}
+{%- if include.entry.title -%}
+  {%- assign this_title = include.entry.title -%}
+{%- elsif this_page.title -%}
+  {%- assign this_title = this_page.title -%}
+{%- else -%}
+  {%- assign this_title = 'Unknown title' -%}
+{%- endif -%}
+
+{%- comment -%} Construct list entry {%- endcomment -%}
+<li {%- if this_url == page.url %} active{%- endif -%}>
+{%- if this_url -%}
+<a href="{{ this_url }}">
+{%- endif -%}{{ this_title }}{%- if this_url -%}
+</a>
+{%- endif %}
+{%- comment -%} Construct sublist if available {%- endcomment -%}
+{%- if include.entry.sub.size > 0 %}
+<ul class="page-navigation-sublist">
+<!-- {{ include.entry.sub.size }} -->
+{% for sub in include.entry.sub -%}
+{% include navigation-item.html entry=sub -%} 
+{% endfor -%}
+</ul>
+{% endif -%}
+</li>
