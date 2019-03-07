@@ -1,4 +1,4 @@
-theme: jekyll-wgdd
+remote_theme: dleidert/jekyll-wgdd
 
 title: "[erfahrungen, meinungen, halluzinationen]"
 description: "ein kleines, privates blog"
