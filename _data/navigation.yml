@@ -13,6 +13,13 @@ main:
     title: bde-lock
   - url: /jekyll-wgdd/
     title: Jekyll theme
+- url: about.md
+  title: About
+  sub:
+  - url: /about/#about-me
+    title: About me
+  - url: /about/#about-my-site
+    title: About my site
 
 header:
 - url: blog.md
