@@ -9,9 +9,9 @@ main:
 - url: projects.md
   title: My projects
   sub:
-  - url: /bde-lock/
+  - url: https://dleidert.github.io/bde-lock/
     title: bde-lock
-  - url: /jekyll-wgdd/
+  - url: https://dleidert.github.io/jekyll-wgdd/
     title: Jekyll theme
 - url: about.md
   title: About
