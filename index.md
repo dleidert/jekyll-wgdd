@@ -1,4 +1,5 @@
 ---
+layout: page
 title: Index
 description: >
   Site description
@@ -8,9 +9,17 @@ description: >
 
 Text
 
+<http://www.wgdd.de>
+
 ## Header 1.1
 
-Text
+More text
+ 
+```YAML
+title: myTitle
+description: myDescription
+foo: bar
+```
 
 ## Header 1.2
 
