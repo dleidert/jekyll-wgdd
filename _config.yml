@@ -9,6 +9,8 @@ email: daniel.leidert@wgdd.de
 google_analytics:
 google_site_verification:
 
+permalink: pretty
+
 jekyll_wgdd:
   site_conf:
     debug: true
