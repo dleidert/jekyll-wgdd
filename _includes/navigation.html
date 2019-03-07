@@ -4,7 +4,7 @@
      aria-labelledby="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-title">
   <button class="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-title"
           id="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-title"
-          >Open {%- if include.scope -%}{{ include.scope }}{%- endif -%} Page Navigation</button>
+          >Open {%- if include.scope %} {{ include.scope }} {% endif -%}Page Navigation</button>
 {%- if nav %}
 <ul class="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-list">
 {% for item in nav -%}
