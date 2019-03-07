@@ -37,7 +37,6 @@
 {%- comment -%} Construct sublist if available {%- endcomment -%}
 {%- if include.entry.sub.size > 0 %}
 <ul class="page-navigation-sublist">
-<!-- {{ include.entry.sub.size }} -->
 {% for sub in include.entry.sub -%}
 {% include navigation-item.html entry=sub -%} 
 {% endfor -%}
