@@ -1,14 +1,15 @@
 <header class="page-header" id="page-label" aria-label="Page title">
+
+{% if site.data.navigation["header"] %}
+{% include navigation.html scope="header" %}
+{% endif %}
+
   <h1 class="page-title" id="page-title">{{ page.title }} :: {{ site.title }}</h1>
   <span class="page-banner">
     <a href="http://www.debian.org" title="Debian GNU/Linux Project">
       <img src="http://www.debian.org/banners/debian.png" alt="Debian GNU/Linux Project - www.debian.org"/>
     </a>
   </span>
-
-{% if site.data.navigation["header"] %}
-{% include navigation.html scope="header" %}
-{% endif %}
 
 </header>
 
