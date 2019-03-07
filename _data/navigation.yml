@@ -1,9 +1,7 @@
 main:
 - url: debian.md
-  title: My Debian
   sub:
   - url: debian/blog.md
-    title: My Debian blog
   - url: debian/packages.md
     title: My Packages
   - url: debian/hardware.md
