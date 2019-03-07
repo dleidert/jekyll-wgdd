@@ -1,4 +1,4 @@
-head:
+header:
   - url: subjetcta.md
     title: 'Subject a'
   - url: blog.md # use title from page.title
