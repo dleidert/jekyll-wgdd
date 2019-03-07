@@ -5,7 +5,7 @@ title: Hallo Welt!
 description: >
   Hallo Welt und willkommen auf meinem Blog [Erfahrungen, Meinungen und Halluzinationen]
   unter www.wgdd.de.
-last_modified_at: 2005-01-27 05:01 +0100
+date: 2005-01-27 05:01 +0100
 categories:
 - blog
 tags:
