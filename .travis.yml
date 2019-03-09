@@ -49,3 +49,4 @@ matrix:
   - if: branch = master
     before_install: gem update --system
     before_script: bundle update
+    script: gem build -q jekyll-wgdd.gemspec
