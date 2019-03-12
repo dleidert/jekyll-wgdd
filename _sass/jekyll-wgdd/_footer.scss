@@ -1,0 +1,36 @@
+.page-footer {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border: 1px solid blue;
+}
+
+.page-footer button {
+  display: none;
+}
+
+.page-footer small {
+  display: block;
+  float: right;
+}
+
+.page-navigation-footer {
+  float: left;
+}
+
+ul.page-navigation-footer-list {
+  display: block;
+  list-style-type: none;
+  padding: 5px;
+  overflow: hidden;
+}
+
+ul.page-navigation-footer-list li {
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid #f1f1f1;
+}
