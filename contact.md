@@ -1,18 +1,12 @@
 ---
-layout: page
+layout: legal
 title: Contact, Privacy, Impressum / Legal Notice
 description: >
   Contact information, privacy declaration and impressum - legal notice.
 ---
 
-## Contact
+## Notes
 
 ...
 
-## Privacy
-
-...
-
-## Impressum / Legal notice
-
-...
+<!-- {{ site.legals | inspect }} -->
