@@ -6,7 +6,8 @@
           id="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-title"
           >Open {%- if include.scope %} {{ include.scope }} {% endif -%}Page Navigation</button>
 {%- if nav %}
-<ul class="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-list">
+<ul id="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-list"
+    class="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-list">
 {% for item in nav -%}
 {% include navigation-item.html entry=item -%}
 {% endfor -%}
