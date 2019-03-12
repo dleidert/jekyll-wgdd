@@ -22,6 +22,9 @@ jekyll_wgdd:
     mobile:
       theme_color: "#CC0033"
 
+collections:
+  legals:
+
 plugins:
 - jekyll-feed
 - jekyll-paginate
