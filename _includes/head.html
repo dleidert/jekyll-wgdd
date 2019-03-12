@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8">
   {% if conf.debug -%}
-  <meta name="date" content="{{ site.time | date_to_xmlschema }}">
+  <meta name="date" content="{{ site.time | date_to_xmlschema }}" itemprop="sdDatePublished">
   {% endif -%}
   {% if conf.expires -%}
   <meta http-equiv="expires" content="{{ conf.expires }}">
