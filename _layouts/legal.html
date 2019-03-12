@@ -1,0 +1,24 @@
+---
+layout: page
+type: ContactPage
+---
+
+{{ content }}
+
+{%- if site.legals.size > 0 -%}
+{%- for note in site.legals -%}
+<section class="page-section" itemscope itemtype="https://schema.org/{{ note.schema | default: 'Thing' }}">
+
+<header class="page-section-header" itemprop="name">
+<h2 class="page-section-header-title" itemprop="headline">{{ note.title }}</h2>
+</header>
+
+{{ note.content | markdownify }}
+
+<footer class="page-article-content-footer">
+<!-- footer, without include? maybe date? -->
+</footer>
+
+</section>
+{%- endfor -%}
+{%- endif -%}
