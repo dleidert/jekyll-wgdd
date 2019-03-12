@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: [erfahrungen, meinungen, halluzinationen]
+title: Blog
 description: My blog
 lang: en
 ---
