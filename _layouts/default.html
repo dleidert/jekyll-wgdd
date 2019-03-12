@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" itemscope itemtype="https://schema.org/{%- if page.type -%}{{ page.type }}{%- else -%}WebPage{%- endif -%}">
 
   {% include head.html %}
 
@@ -7,7 +7,7 @@
 
     {% include header.html %}
 
-    <main class="page-main-content" aria-label="Content" aria-labelledby="page-label">
+    <main class="page-main-content" aria-label="Content" aria-labelledby="page-label" itemprop="mainContentOfPage">
       <div class="page-main-content-wrapper">
         {{ content }}
       </div>
