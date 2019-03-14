@@ -1,7 +1,7 @@
 {%- comment -%} Empty variables {%- endcomment -%}
-{%- assign this_page = nil -%}
-{%- assign this_url = nil -%}
-{%- assign this_url = nil -%}
+{%- assign this_page  = nil -%}
+{%- assign this_url   = nil -%}
+{%- assign this_title = nil -%}
 
 {%- comment -%} If include.entry.url==nil ... thispage = site.pages! {%- endcomment -%}
 {%- if include.entry.url -%}
@@ -30,8 +30,14 @@
 {%- comment -%} Construct list entry {%- endcomment -%}
 <li {%- if this_url == page.url %} active{%- endif -%}>
 {%- if this_url -%}
-<a href="{{ this_url }}">
-{%- endif -%}{{ this_title }}{%- if this_url -%}
+<a href="{{- this_url -}}">
+{%- endif -%}
+{%- if include.entry.img -%}
+<img src="{{- include.entry.img -}}" alt="{{- this_title -}}">
+{%- else -%}
+{{- this_title -}}
+{%- endif -%}
+{%- if this_url -%}
 </a>
 {%- endif %}
 {%- comment -%} Construct sublist if available {%- endcomment -%}
