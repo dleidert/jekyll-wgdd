@@ -28,6 +28,9 @@ header:
   title: Software
 - url: about.md
   title: About me
+- url: https://www.paypal.me/dleidert/
+  title: Support via PayPal
+  #img: https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg
 
 footer:
 - title: Kontakt
