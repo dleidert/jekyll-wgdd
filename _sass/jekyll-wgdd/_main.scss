@@ -1,9 +1,10 @@
 main {
   //border: 1px solid green;
-  position: relative;
-  top: 70px;
-  left: 10%;
+  position: absolute;
+  padding-top: 5em;
+  margin-bottom: 5em;
+  left: 5%;
   z-index: 4000;
   //background-color: $page-background-color;
-  width: 80%;
+  width: 90%;
 }
