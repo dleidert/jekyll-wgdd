@@ -23,14 +23,20 @@
     top: 0;
     width: 250px;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.2em; //0.7 * $nav-button-size;
     font-weight: bold;
     border: 1px solid $head-background-color;
+    border-top: none;
     border-radius: 0 0 20px 20px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    //box-shadow: 5px 5px 2px 0 rgba(204,204,204,0.5);
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.2);
     background-image: linear-gradient($head-background-color, $page-background-color);
     padding: $head-padding-top;
+    //transition: box-shadow 0.6s ease-in-out;
+
+    &:hover {
+      box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.4);
+      transition: all 0.5s ease-in-out;
+    }
   }
 
   ul.page-navigation-header-list {
@@ -65,7 +71,7 @@
       a {
         text-decoration: none;
         display: block;
-        color: blue;
+        color: #666;
         padding: 0.2*$nav-button-size 0.1*$nav-button-size;
 
         &[href*='paypal.me'] {
@@ -75,10 +81,9 @@
           border: 1px solid $head-background-color;
         }
         &:hover {
-          color: red;
-          box-shadow: inset 0px 8px 16px 0px rgba(0,0,0,0.2);
+          @extend %header-box-shadow;
           text-decoration: underline;
-          transition: all 0.6s ease-in-out;
+          transition: all 0.5s ease-in-out;
           //background-color: red;
           //color: white;
         }

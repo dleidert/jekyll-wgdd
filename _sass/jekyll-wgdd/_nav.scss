@@ -19,6 +19,12 @@ nav.page-navigation-main {
     background-image: -webkit-repeating-linear-gradient(#ccc, #ccc 2px, #fff 2px, #fff 4px);
     background-image: repeating-linear-gradient(#ccc, #ccc 2px, #fff 2px, #fff 4px);
     z-index: $sidebar-z-index + 1;
+    transition: box-shadow 0.5s ease-in-out;
+
+    &:hover {
+      @extend %header-box-shadow;
+      transition: all 0.5s ease-in-out;
+    }
   }
 
   ul.page-navigation-main-list {
