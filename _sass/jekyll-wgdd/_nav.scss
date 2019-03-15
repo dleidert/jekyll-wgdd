@@ -1,23 +1,24 @@
 nav.page-navigation-main {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  z-index: 8000;
+  padding: $head-padding-top;
+  z-index: $sidebar-z-index;
 
   #page-navigation-main-title {
     display: block;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 40px;
+    //top: 0;
+    //left: 0;
+    width: $nav-button-size;
     height: 0;
-    padding-top: 40px;
+    padding-top: $nav-button-size;
     overflow: hidden;
     border: 1px solid #ccc;
     background: white 10px 10px / 20px 20px no-repeat;
     background-image: -webkit-repeating-linear-gradient(#ccc, #ccc 2px, #fff 2px, #fff 4px);
     background-image: repeating-linear-gradient(#ccc, #ccc 2px, #fff 2px, #fff 4px);
-    z-index: 8000;
+    z-index: $sidebar-z-index;
   }
 
   ul.page-navigation-main-list {
@@ -27,10 +28,9 @@ nav.page-navigation-main {
     //background-color: $head-background-color;
     top: 0;
     left: 0;
-    min-width: 15%;
-    padding-top: 3em;
+    width: 13%;
+    padding-top: 2 * $head-padding-top + $nav-button-size;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 7000;
     height: 100%;
 
     li {
@@ -38,16 +38,17 @@ nav.page-navigation-main {
       padding: 5px;
 
       a {
+        display: block;
         text-decoration: none;
       }
     }
   }
 
   &:hover {
-    z-index: 7000;
 
     #page-navigation-main-title {
-      background-image: linear-gradient(45deg, transparent 13px, #ccc 13px, #ccc 15px, transparent 0), linear-gradient(-45deg, white 13px, #ccc 13px, #ccc 15px, white 0);
+      background-image: linear-gradient(45deg, transparent 13px, #ccc 13px, #ccc 15px, transparent 0),
+                        linear-gradient(-45deg, white 13px, #ccc 13px, #ccc 15px, white 0);
     }
 
     ul.page-navigation-main-list {

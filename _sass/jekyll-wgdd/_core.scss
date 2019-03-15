@@ -1,8 +1,18 @@
 /* Core CSS */
 
-$head-background-color: AliceBlue;
+$header-z-index: 6000;
+$footer-z-index: $header-z-index;
+$sidebar-z-index: $header-z-index + 2000;
+$main-z-index: $header-z-index - 2000;
+
+$head-background-color: #f0f0f0; //AliceBlue;
 $page-background-color: #ffffff;
 $foot-background-color: #f0f0f0;
+
+$head-height: 4em;
+$head-padding-top: 10px;
+$head-nav-padding-top: 10px;
+$nav-button-size: 40px;
 
 * {
   margin: 0;

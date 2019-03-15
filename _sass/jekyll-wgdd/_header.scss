@@ -1,11 +1,12 @@
 .page-header {
-  //display: block;
-  z-index: 6000;
+  display: block;
+  z-index: $header-z-index;
   margin: 0;
   padding: 0;
   width: 100% !important;
-  position: absolute;
-  height: 3em;
+  position: relative;
+  height: $head-height;
+  background-image: linear-gradient($head-background-color, $page-background-color);
 
   button {
     display: none;
@@ -13,6 +14,7 @@
 
   a {
     text-decoration: none;
+    //transition: all 0.2s ease-in-out;
   }
 
   .page-title {
@@ -28,32 +30,31 @@
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     //box-shadow: 5px 5px 2px 0 rgba(204,204,204,0.5);
     background-image: linear-gradient($head-background-color, $page-background-color);
-    padding: 10px;
+    padding: $head-padding-top;
   }
 
   ul.page-navigation-header-list {
-    display: block;
+    //display: block;
     overflow: hidden;
     list-style-type: none;
     position: absolute;
     right: 0;
     top: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
+    padding: $head-padding-top;
+    //padding-bottom: 10px;
+    //padding-right: 10px;
     //background-color: $head-background-color;
-    background-image: linear-gradient($head-background-color, $page-background-color);
-    width: 100%;
+    //background-image: linear-gradient($head-background-color, $page-background-color);
+    //width: 100%;
     text-align: right;
-    height: 3em;
+    height: $head-height;
 
     li {
+      //float: right;
       display: inline-block;
-      margin: 0 5px;
-      padding: 5px 10px;
-      list-style-type: none;
       color: blue;
-      //width: 120px;
+      font-size: 0.6 * $nav-button-size;
+      margin: 0 5px;
       //font-size: 1.2em;
       //background-image: linear-gradient($head-background-color, $page-background-color);
 
@@ -63,15 +64,23 @@
 
       a {
         text-decoration: none;
+        display: block;
+        color: blue;
+        padding: 0.2*$nav-button-size 0.1*$nav-button-size;
 
         &[href*='paypal.me'] {
           color: white;
           background-color: limegreen;
-          padding: 10px;
           text-align: center;
+          border: 1px solid $head-background-color;
         }
         &:hover {
-          font-style: oblique;
+          color: red;
+          box-shadow: inset 0px 8px 16px 0px rgba(0,0,0,0.2);
+          text-decoration: underline;
+          transition: all 0.6s ease-in-out;
+          //background-color: red;
+          //color: white;
         }
       }
     }

@@ -6,8 +6,9 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  background-color: $foot-background-color;
-  z-index: 7000;
+  background-image: linear-gradient($page-background-color, $foot-background-color);
+  //background-color: $foot-background-color;
+  z-index: $footer-z-index;
 
   button {
     display: none;
