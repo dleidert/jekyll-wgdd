@@ -18,7 +18,7 @@ nav.page-navigation-main {
     background: white 10px 10px / 20px 20px no-repeat;
     background-image: -webkit-repeating-linear-gradient(#ccc, #ccc 2px, #fff 2px, #fff 4px);
     background-image: repeating-linear-gradient(#ccc, #ccc 2px, #fff 2px, #fff 4px);
-    z-index: $sidebar-z-index;
+    z-index: $sidebar-z-index + 1;
   }
 
   ul.page-navigation-main-list {
