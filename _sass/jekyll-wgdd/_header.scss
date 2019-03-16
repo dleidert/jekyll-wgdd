@@ -80,6 +80,7 @@
           text-align: center;
           border: 1px solid $head-background-color;
         }
+
         &:hover {
           @extend %header-box-shadow;
           text-decoration: underline;
