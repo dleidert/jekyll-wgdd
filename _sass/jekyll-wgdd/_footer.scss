@@ -8,6 +8,7 @@
   background-image: linear-gradient($page-background-color, $foot-background-color);
   //background-color: $foot-background-color;
   z-index: $footer-z-index;
+  height: $foot-height;
 
   button {
     display: none;
