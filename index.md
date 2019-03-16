@@ -15,7 +15,7 @@ Text
 
 More text
  
-```YAML
+```yaml
 title: myTitle
 description: myDescription
 foo: bar
@@ -25,22 +25,41 @@ foo: bar
 
 Text
 
-```YAML
+```yaml
 title: Title
 description: foobar
 ```
 
-```JSON
+```json
 {{ site.jekyll_wgdd | neat_json }}
 ```
 
-```C
+```c
 #include <stdio.h>
 #include <stdlib.h>
 
 int main (void) {
   printf("Hello World!\n");
   exit(0);
+}
+```
+
+{% highlight ruby linenos %}
+def show
+  puts "Outputting a very lo-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-ong lo-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-ong line"
+  @widget = Widget(params[:id])
+  respond_to do |format|
+    format.html # show.html.erb
+    format.json { render json: @widget }
+  end
+end
+{% endhighlight %}
+
+```css
+#container {
+  float: left;
+  margin: 0 -240px 0 0;
+  width: 100%;
 }
 ```
 
