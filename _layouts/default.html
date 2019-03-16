@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}" itemscope itemtype="https://schema.org/{%- if page.type -%}{{ page.type }}{%- else -%}WebPage{%- endif -%}">
 
-  {% include head.html %}
+  {% include head.html -%}
 
   <body>
 
-    {% include header.html %}
+    {% include header.html -%}
 
-    {% include page-toc.html %}
+    {% include page-toc.html -%}
 
     <main class="page-main-content" aria-label="Content" aria-labelledby="page-label" itemprop="mainContentOfPage">
       <div class="page-main-content-wrapper">
@@ -15,7 +15,7 @@
       </div>
     </main>
 
-    {% include footer.html %}
+    {% include footer.html -%}
 
   </body>
 
