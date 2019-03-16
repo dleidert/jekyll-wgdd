@@ -6,12 +6,11 @@ schema: WebPage
 <article class="page-article" aria-labelledby="page-label">
 
 <header class="page-article-header">
-<h1>{{ page.title }}</h1>
 </header>
 
-{% include page-toc.html %}
-
+<div class="page-article-content">
 {{ content }}
+</div>
 
 <footer class="page-article-footer">
 <!-- footer, without include? maybe date? -->
