@@ -55,6 +55,7 @@ nav.page-navigation-main {
     #page-navigation-main-title {
       background-image: linear-gradient(45deg, transparent 13px, #ccc 13px, #ccc 15px, transparent 0),
                         linear-gradient(-45deg, white 13px, #ccc 13px, #ccc 15px, white 0);
+      @extend %header-box-shadow;
     }
 
     ul.page-navigation-main-list {
