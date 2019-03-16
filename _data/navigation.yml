@@ -1,4 +1,6 @@
 main:
+- url: index.md
+  title: Home
 - url: debian.md
   sub:
   - url: debian/blog.md
