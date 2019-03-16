@@ -1,27 +1,68 @@
-.page-toc {
+aside.page-toc {
+  position: sticky !important;
+  top: $head-padding-top;
+  right: 0;
   float: right;
-  margin-right: 5%;
-  padding: 5px 5px 0 5px;
+  margin: 2em 3% !important;
   width: 15%;
-  z-index: 8000;
-  border: 1px solid #000;
+  z-index: $main-z-index + 1;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: $nav-background-color;
+
+  &:after {
+    content: "";
+    display: column;
+    clear: both;
+  }
+
+  .page-toc-label {
+    padding: 5px;
+  }
 
   button {
     display: none;
   }
 
-  ul {
+  ul.page-toc-content {
     list-style-type: none;
+    border-top: 1px solid #ccc;
+
+    ul {
+      list-style-type: none;
+    }
 
     li {
-      display: block;
-      margin: 5px;
-      padding: 5px 0;
-      border: 1px solid #000;
+      border-top: 1px solid #ccc;
 
-      & li {
-        padding-left: 10px;
+      a {
+        display: block;
+        padding: 5px;
       }
+
+      ul > li a {
+        padding-left: 1em;
+      }
+
+      ul li ul > li a {
+        padding-left: 2em;
+      }
+
+      ul li ul li ul > li a {
+        padding-left: 3em;
+      }
+
+      ul li ul li ul li ul > li a {
+        padding-left: 4em;
+      }
+
+      ul li ul li ul li ul li ul > li a {
+        padding-left: 5em
+      }
+    }
+
+    > li:first-child {
+      border: none;
     }
   }
 }

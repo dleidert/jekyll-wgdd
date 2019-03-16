@@ -1,5 +1,5 @@
 nav.page-navigation-main {
-  position: absolute;
+  position: fixed !important;
   top: 0;
   left: 0;
   padding: $head-padding-top;
@@ -30,8 +30,8 @@ nav.page-navigation-main {
   ul.page-navigation-main-list {
     display: none;
     position: fixed;
-    background-image: linear-gradient(to left, $foot-background-color, $page-background-color);
-    //background-color: $head-background-color;
+    //background-image: linear-gradient(to left, $foot-background-color, $page-background-color);
+    background-color: $nav-background-color;
     top: 0;
     left: 0;
     width: 13%;

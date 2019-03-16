@@ -1,11 +1,27 @@
 main {
-  //border: 1px solid green;
   position: relative;
-  padding-top: 1em;
-  //margin-bottom: 5em;
-  left: 5%;
+  margin: 2em 15% 4em 12%;
   z-index: $main-z-index;
-  //background-color: $page-background-color;
-  width: 90%;
-  overflow: auto;
+  background-color: $page-background-color;
+  overflow: hidden;
+  min-width: 60%;
+
+  .page-article-content {
+    align: center;
+    width: auto;
+    font-size: 1.2em;
+    line-height: 1.2em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+    color: #666;
+    background-color: $head-background-color;
+  }
+
+  pre {
+    overflow-x: auto;
+  }
 }

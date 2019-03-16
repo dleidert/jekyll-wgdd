@@ -6,17 +6,22 @@ $sidebar-z-index: $header-z-index + 2000;
 $main-z-index: $header-z-index - 2000;
 
 $head-background-color: #f0f0f0; //AliceBlue;
-$page-background-color: #ffffff;
-$foot-background-color: #f0f0f0;
+$page-background-color: rgba(255,255,255,0.8);
+$nav-background-color:  $head-background-color;
+$foot-background-color: $head-background-color;
 
 $head-height: 4em;
 $head-padding-top: 10px;
 $head-nav-padding-top: 10px;
+
 $nav-button-size: 40px;
+
+$foot-padding-bottom: $head-padding-top;
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
