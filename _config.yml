@@ -13,6 +13,7 @@ google_analytics: false
 google_site_verification: false
 
 permalink: pretty
+highlighter: rouge
 
 jekyll_wgdd:
   site_conf:
