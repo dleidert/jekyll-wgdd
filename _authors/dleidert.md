@@ -1,13 +1,13 @@
 ---
 layout: author
 name: Daniel Leidert
-email: daniel.leidert@wgdd.de
 links:
   home: http://www.wgdd.de
   blog: http://blog.wgdd.de
+  email: daniel.leidert@wgdd.de
+  debian: dleidert
   github: dleidert
   instagram: daniel.leidert
-  debian: dleidert
 cryptokey: AAAABBBB
 ---
 
