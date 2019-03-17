@@ -5,7 +5,8 @@ email: daniel.leidert@wgdd.de
 links:
   home: http://www.wgdd.de
   blog: http://blog.wgdd.de
-  instagram: dleidert
+  github: dleidert
+  instagram: daniel.leidert
   debian: dleidert
 cryptokey: AAAABBBB
 ---
