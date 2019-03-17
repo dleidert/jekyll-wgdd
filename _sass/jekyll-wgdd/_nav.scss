@@ -4,12 +4,12 @@ nav.page-navigation-main {
   left: 0;
   padding: $head-padding-top;
   z-index: $sidebar-z-index;
+  height: 100%;
+  width: 0;
 
   #page-navigation-main-title {
     display: block;
     position: absolute;
-    //top: 0;
-    //left: 0;
     width: $nav-button-size;
     height: 0;
     padding-top: $nav-button-size;
@@ -34,10 +34,11 @@ nav.page-navigation-main {
     background-color: $nav-background-color;
     top: 0;
     left: 0;
-    width: 13%;
+    min-width: 14%;
     padding-top: 2 * $head-padding-top + $nav-button-size;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: /*inset*/ 0px 8px 16px 0px rgba(0,0,0,0.2);
     height: 100%;
+    transition: 1s;
 
     li {
       display: block;
