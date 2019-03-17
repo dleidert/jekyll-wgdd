@@ -26,6 +26,9 @@ jekyll_wgdd:
 
 collections:
   legals:
+  authors:
+    output: true
+    permalink: /about/:name/
 
 plugins:
 - jekyll-feed
