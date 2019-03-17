@@ -1,0 +1,32 @@
+aside.page-side {
+  position: sticky !important;
+  position: -webkit-sticky;
+  top: 5em;
+  left: 0;
+  float: left;
+  margin: 2em $head-padding-top !important;
+  width: 5%;
+  height: 100px;
+  z-index: $main-z-index + 1;
+  //border: 1px solid #ccc;
+  //border-radius: 10px;
+  //background-color: $nav-background-color;
+
+  &:after {
+    content: "";
+    display: column;
+    clear: both;
+  }
+
+  button {
+    display: none;
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+      display: block;
+    }
+  }
+}

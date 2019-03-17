@@ -1,0 +1,12 @@
+{% assign author = page.author | default: site.author -%}
+<aside class="page-side" aria-labelledby="page-side-label">
+  <nav class="page-side-nav" aria-labelledby="page-side-label">
+    <header class="page-sidebar-header">
+      <button class="page-sidebar-label">Open Sidebar Content</button>
+      <h4 class="page-sidebar-label" id="page-sidebar-label">Sidebar</h4>
+    </header>
+    <ul class="page-sidebar-content">
+      {% include social.html authorid=author html=li class="social_link" %}
+    </ul>
+  </nav>
+</aside>
