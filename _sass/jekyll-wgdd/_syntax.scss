@@ -1,0 +1,7 @@
+.highlight {
+  background: $page-background-color;
+
+  .highlighter-rouge & {
+    background: $highligher-background-color;
+  }
+}
