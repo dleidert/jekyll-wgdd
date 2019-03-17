@@ -27,7 +27,12 @@
   {%- assign this_title = 'Unknown title' -%}
 {%- endif -%}
 
-{%- comment -%} Construct list entry {%- endcomment -%}
+{%- comment -%} Construct button and begin sublist with parent item {%- endcomment -%}
+{%- if include.entry.sub.size > 0 %}
+<li><button class="page-navigation-sublist">{{- this_title -}}</button>
+<ul class="page-navigation-sublist">
+{%- endif %}
+{%- comment -%} Construct list entry {%- endcomment %}
 <li {%- if this_url == page.url %} active{%- endif -%}>
 {%- if this_url -%}
 <a href="{{- this_url -}}">
@@ -39,13 +44,13 @@
 {%- endif -%}
 {%- if this_url -%}
 </a>
-{%- endif %}
-{%- comment -%} Construct sublist if available {%- endcomment -%}
-{%- if include.entry.sub.size > 0 %}
-<ul class="page-navigation-sublist">
-{% for sub in include.entry.sub -%}
-{% include navigation-item.html entry=sub -%} 
-{% endfor -%}
-</ul>
-{% endif -%}
+{%- endif -%}
 </li>
+{%- comment -%} Construct sublist entries {%- endcomment -%}
+{%- if include.entry.sub.size > 0 %}
+{%- for sub in include.entry.sub -%}
+{%- include navigation-item.html entry=sub -%}
+{%- endfor %}
+</ul>
+</li>
+{%- endif -%}

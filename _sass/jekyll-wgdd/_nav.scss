@@ -42,11 +42,40 @@ nav.page-navigation-main {
 
     li {
       display: block;
-      padding: 5px;
+
+      button {
+        background: none !important;
+        color: inherit;
+        border: inherit;
+        padding: inherit;
+        font: inherit;
+        cursor: pointer;
+        padding: 5px 0;
+        display: block;
+        width: 100%;
+        text-align: left;
+        line-height: initial;
+
+        &:after {
+          content: "\25bc";
+          text-align: right;
+        }
+      }
+
+      ul {
+        display: none;
+        background-color: #fff;
+      }
+
+      &:focus-within /*has(> button:active)*/ ul {
+        display: block;
+      }
 
       a {
         display: block;
+        padding: 5px 0;
         text-decoration: none;
+        color: #000;
       }
     }
   }
