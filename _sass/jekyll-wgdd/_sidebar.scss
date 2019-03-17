@@ -22,11 +22,25 @@ aside.page-side {
     display: none;
   }
 
-  ul {
+  ul.page-sidebar-content {
     list-style-type: none;
 
     li {
       display: block;
+      text-align: left;
+
+      i {
+        font-size: $nav-button-size;
+        padding: 5px 0;
+        opacity: 0.5;
+        color: deepskyblue;
+        //border-radius: 50%;
+        //background-color: #f0f0f0;
+      }
+
+      span.social-link-text {
+        display: none;
+      }
     }
   }
 
