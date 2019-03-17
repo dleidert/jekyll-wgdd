@@ -10,6 +10,6 @@
 
 {%- endcomment -%}
 
-<a href="{{ include.base }}{{ include.id }}" {%- if include.tip %} title="{{ include.tip }}"{%- endif -%}>{%- if include.fa -%}<i class="{{ include.fa }}"></i>{%- endif -%}{{ include.text }}</a>
+<a href="{{ include.base }}{{ include.id }}" {%- if include.tip %} title="{{ include.tip }}"{%- endif -%}>{%- if include.fa -%}<i class="{{ include.fa }}"></i>{%- endif -%}<span class="social-link-text">{{ include.text }}</span></a>
 
 {%- comment -%} This comment just removes all whitespace {%- endcomment -%}
