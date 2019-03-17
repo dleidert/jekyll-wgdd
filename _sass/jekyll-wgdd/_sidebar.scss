@@ -4,7 +4,7 @@ aside.page-side {
   top: 5em;
   left: 0;
   float: left;
-  margin: 2em $head-padding-top !important;
+  margin: 2em 2*$head-padding-top !important;
   width: 5%;
   height: 100px;
   z-index: $main-z-index + 1;
@@ -18,12 +18,32 @@ aside.page-side {
     clear: both;
   }
 
-  .page-sidebar-label {
+  .page-sidebar-label,
+  .page-sidebar-button {
     display: none;
+  }
+
+  .page-sidebar-button {
+    display: block;
+    border: none;
+    background: none !important;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+
+    i {
+      display: block;
+      font-size: $nav-button-size;
+      margin: 5px 0;
+    }
   }
 
   ul.page-sidebar-content {
     list-style-type: none;
+    display: none;
 
     li {
       display: block;
@@ -31,7 +51,7 @@ aside.page-side {
 
       i {
         font-size: $nav-button-size;
-        padding: 5px 0;
+        margin: 5px 0;
         opacity: 0.5;
         color: deepskyblue;
         //border-radius: 50%;
@@ -44,7 +64,7 @@ aside.page-side {
     }
   }
 
-  //&:focus-within ul.page-sidebar-content {
-  //  display: block;
-  //}
+  &:focus-within ul.page-sidebar-content {
+    display: block;
+  }
 }
