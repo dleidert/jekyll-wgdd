@@ -1,0 +1,15 @@
+{%- comment -%}
+
+  include.base:  URL
+  include.id:    account or user name
+  include.tip:   tooltip to show
+  include.fa:    Awesome Fonts Icons
+  include.text:  Text
+
+  TODO: Allow images
+
+{%- endcomment -%}
+
+<a href="{{ include.base }}{{ include.id }}" {%- if include.tip %} title="{{ include.tip }}"{%- endif -%}>{%- if include.fa -%}<i class="{{ include.fa }}"></i>{%- endif -%}{{ include.text }}</a>
+
+{%- comment -%} This comment just removes all whitespace {%- endcomment -%}

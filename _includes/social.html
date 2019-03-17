@@ -1,5 +1,33 @@
 {%- comment -%}
 
-  authorid: 
+  include.authorid: author name or id
+  include.html:     HTML element to surround it
+  include.attr:     HTML attributes to add to element
+  include.class:    HTML element class
+
+  The following lines will determine the page author
 
 {%- endcomment -%}
+
+{%- assign author = site.authors | where: "name", include.authorid | first -%}
+{%- unless author -%}
+{%- assign author = site.authors | where_exp: "author", "author.name" == include.authorid | first -%}
+{%- endunless -%}
+
+{%- comment -%}
+
+{%- endcomment -%}
+
+{%- if author.links.size > 0 -%}
+{%- for link in author.links -%}
+{%- if include.html -%}
+<{{ include.html }} {%- if include.attr %} {{ include.attr }}{%- endif  -%} {%- if include.class %} class="{{ include.class }}"{%- endif  -%}>
+{%- endif  -%}
+{%- assign template = "social/" | append: link[0] | append: ".html" -%}
+{%- assign resource = link[1] -%}
+{%- include {{ template }} res=resource -%}
+{%- if include.html -%}
+</{{ include.html }}>
+{%- endif -%}
+{%- endfor -%}
+{%- endif -%}
