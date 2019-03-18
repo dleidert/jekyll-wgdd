@@ -4,7 +4,7 @@ nav.page-navigation-main {
   left: 0;
   padding-left: 1px;
   z-index: $navbar-z-index;
-  height: 100%;
+  min-height: 100%;
   width: 0;
 
   #page-navigation-main-title {
@@ -39,7 +39,7 @@ nav.page-navigation-main {
     min-width: 14%;
     padding-top: 2 * $head-padding-top + $nav-button-size;
     box-shadow: /*inset*/ 0px 8px 16px 0px rgba(0,0,0,0.2);
-    height: 100%;
+    min-height: 100%;
     transition: 1s;
 
     li {
