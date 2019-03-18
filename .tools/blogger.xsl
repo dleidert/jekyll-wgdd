@@ -85,6 +85,7 @@ description: >
 		<xsl:with-param name="content">
 			<xsl:call-template name="common.header.text"/>
 			<xsl:apply-templates select="blog:content"/>
+			<xsl:text>&#xA;</xsl:text>
 		</xsl:with-param>
 	</xsl:call-template>
 </xsl:template>
