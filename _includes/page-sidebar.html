@@ -1,12 +1,44 @@
-{% assign author = page.author | default: site.author -%}
+{%  assign authid = page.author | default: site.author -%}
+
+{%- assign author = site.authors | where: "name", authid | first -%}
+{%- unless author -%}
+{%- assign author = site.authors | where_exp: "author", "author.name == authid" | first -%}
+{%- endunless -%}
+
 <aside class="page-side" aria-labelledby="page-side-label">
   <nav class="page-side-nav" aria-labelledby="page-side-label">
     <header class="page-sidebar-header">
-      <button class="page-sidebar-button" title="Open contact information"><i class="fas fa-user-edit"></i></button>
-      <h4 class="page-sidebar-label" id="page-sidebar-label">Follow or contact the author</h4>
+      <h4 class="page-sidebar-label" id="page-sidebar-label">Share, comment or follow the author</h4>
     </header>
     <ul class="page-sidebar-content">
-      {%- include social.html authorid=author html='li' attr=foo class='social_link' -%}
+      <li>
+        <button class="page-sidebar-button" title="Open Share Links"><i class="fas fa-share"></i></button>
+        <ul>
+          {%- for res in site.data.shares -%}
+          <li><a href="{{ res.link }}{{ site.url | url_encode }}" title="Share on {{ res.title }}"><i class="{{ res.fa }}"></i><span class="fa-hide"></a></li>
+          {%- endfor -%}
+        </ul>
+      </li>
+      <li>
+        <button class="page-sidebar-button" title="Open contact information"><i class="fas fa-user-edit"></i></button>
+        {%- if author.contacts.size > 0 -%}
+        <ul>
+          {%- for contact in author.contacts -%}
+          {%- assign template = "contact/" | append: contact[0] | append: ".html" -%}
+          {%- assign resource = contact[1] -%}
+          <li>{%- include {{ template }} res=resource -%}</li>
+          {%- endfor -%}
+        </ul>
+        {%- endif -%}
+      </li>
+      <li>
+        <button class="page-sidebar-button" title="Open Social Links"><i class="fas fa-bullseye"></i></button>
+        {%- if author.socials.size > 0 -%}
+        <ul>
+          {%- include social.html author=author html='li' attr=foo class='social_link' -%}
+        </ul>
+        {%- endif -%}
+      </li>
     </ul>
   </nav>
 </aside>

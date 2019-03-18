@@ -28,7 +28,7 @@ aside.page-side {
     display: block;
     border: none;
     background: none !important;
-    color: inherit;
+    color: $text-color;
     font: inherit;
     text-align: left;
     cursor: pointer;
@@ -50,28 +50,39 @@ aside.page-side {
 
   ul.page-sidebar-content {
     list-style-type: none;
-    display: none;
+    display: block;
 
     li {
       display: block;
       text-align: left;
 
       i {
+        color: $fa-icon-color-button;
         font-size: $nav-button-size;
         margin: 5px 0;
-        opacity: 0.5;
-        color: deepskyblue;
-        //border-radius: 50%;
-        //background-color: #f0f0f0;
       }
 
+      ul {
+        display: none;
+
+        i {
+          color: $fa-icon-color;
+          opacity: 0.5;
+        }
+      }
+
+      .page-sidebar-button:only-child i {
+        color: #ccc;
+      }
+
+      &:focus-within ul {
+        display: block;
+      }
+
+      span.fa-hide,
       span.social-link-text {
         display: none;
       }
     }
-  }
-
-  &:focus-within ul.page-sidebar-content {
-    display: block;
   }
 }

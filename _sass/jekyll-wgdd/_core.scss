@@ -7,6 +7,11 @@ $navbar-z-index-hidden: -1;
 $navbar-z-index: $header-z-index + 2000;
 $sidebar-z-index: $main-z-index + 1;
 
+$text-color: #000;
+$header-color: $text-color;
+$fa-icon-color-button: inherit;
+$fa-icon-color: deepskyblue;
+
 $head-background-color: #f0f0f0; //AliceBlue;
 $page-background-color: rgba(255,255,255,0.8);
 $nav-background-color:  $head-background-color;
