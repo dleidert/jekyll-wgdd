@@ -66,19 +66,20 @@ description: >
 
 <xsl:template match="blog:entry">
 	<xsl:variable name="date" select="substring(blog:published, 1, 10)" />
-	<xsl:variable name="title">
+	<xsl:variable name="filename">
 		<xsl:choose>
 			<xsl:when test="blog:link[@rel = 'alternate']/@href">
-				<xsl:value-of select="substring-before(substring(blog:link[@rel = 'alternate']/@href, 29), '.')" />
+				<xsl:variable name="title" select="substring-before(substring(blog:link[@rel = 'alternate']/@href, 29), '.')" />
+				<xsl:value-of select="concat('_posts/', $date ,'-', $title, '.md')" />
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:value-of select="'draft'"/>
+				<xsl:value-of select="concat('_drafts/', $date ,'-draft.md')"/>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:variable>
 
 	<xsl:call-template name="common.write.chunk">
-		<xsl:with-param name="filename" select="concat('_posts/', $date ,'-', $title, '.md')"/>
+		<xsl:with-param name="filename" select="$filename"/>
 		<xsl:with-param name="method" select="'text'"/>
 		<xsl:with-param name="media-type" select="'text/plain'"/>
 		<xsl:with-param name="content">
