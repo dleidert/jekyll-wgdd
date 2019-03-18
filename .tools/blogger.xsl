@@ -31,8 +31,7 @@
 </xsl:template>
 
 <xsl:template name="common.header.text">
-
----
+<xsl:text>---</xsl:text>
 layout: post
 <xsl:choose>
 <xsl:when test="child::blog:category[@scheme = 'http://www.blogger.com/atom/ns#']/@term = 'german'">lang: de</xsl:when>
@@ -45,7 +44,11 @@ layout: post
 author: dleidert
 description: >
   TODO
-<xsl:if test="child::blog:category[@scheme = 'http://www.blogger.com/atom/ns#']">categories: [ <xsl:apply-templates select="child::blog:category[@scheme = 'http://www.blogger.com/atom/ns#']"/> ]
+<xsl:if test="child::blog:category[@scheme = 'http://www.blogger.com/atom/ns#']">categories:
+<xsl:apply-templates select="child::blog:category[@scheme = 'http://www.blogger.com/atom/ns#']"/>
+</xsl:if>
+<xsl:if test="child::blog:category[@scheme = 'http://www.blogger.com/atom/ns#']">tags:
+<xsl:apply-templates select="child::blog:category[@scheme = 'http://www.blogger.com/atom/ns#']"/>
 </xsl:if>
 <xsl:if test="child::blog:link[@rel = 'alternate']">redirect_from:
 <xsl:apply-templates select="child::blog:link[@rel = 'alternate']"/>
@@ -98,12 +101,13 @@ last_modified_at: <xsl:value-of select="."/>
 </xsl:template>
 
 <xsl:template match="blog:category[not(attribute::term = 'german')]">
-	<xsl:text>"</xsl:text><xsl:value-of select="@term" /><xsl:text>"</xsl:text>
-        <xsl:if test="following-sibling::blog:category"><xsl:text>, </xsl:text></xsl:if>
+	<xsl:text>- </xsl:text><xsl:value-of select="@term" />
+        <!-- <xsl:if test="following-sibling::blog:category"><xsl:text>&#xA;</xsl:text></xsl:if> -->
+	<xsl:text>&#xA;</xsl:text>
 </xsl:template>
 
 <xsl:template match="blog:link">
-	<xsl:text>- </xsl:text><xsl:value-of select="substring-after(@href, 'https://www.wgdd.de/')" />
+	<xsl:text>- </xsl:text><xsl:value-of select="substring-after(@href, 'https://www.wgdd.de')" />
 	<xsl:if test="following-sibling::blog:link[@rel = 'alternate']"><xsl:text>&#xA;</xsl:text></xsl:if>
 </xsl:template>
 </xsl:stylesheet>
