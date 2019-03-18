@@ -12,7 +12,7 @@ email: webmaster@wgdd.de
 google_analytics: false
 google_site_verification: false
 
-permalink: pretty
+permalink: /:year/:month/:title #pretty
 highlighter: rouge
 markdown: kramdown
 
