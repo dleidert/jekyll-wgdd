@@ -1,6 +1,5 @@
 {%  assign authid = page.author | default: site.author -%}
-
-{%- assign author = site.authors | where: "name", authid | first -%}
+{%- assign author = site.authors | where_exp: "author", "author.id contains authid" | first -%}
 {%- unless author -%}
 {%- assign author = site.authors | where_exp: "author", "author.name == authid" | first -%}
 {%- endunless -%}

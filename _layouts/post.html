@@ -5,14 +5,20 @@ type: Blog
 
 {%- assign date_format = site.jekyll_wgdd.site_conf.date_format | default: "%Y-%m-%d %H:%M" -%}
 
+{%- assign authid = page.author | default: site.author -%}
+{%- assign author = site.authors | where_exp: "author", "author.id contains authid" | first -%}
+{%- unless author -%}
+{%- assign author = site.authors | where_exp: "author", "author.name == authid" | first -%}
+{%- endunless -%}
+
 <article class="post" aria-labelledby="post-title" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" itemid="{{ page.url | absolute_url }}">
 
   <header class="post-header">
     <h1 class="post-title" id="post-title" itemprop="headline">{{ page.title | escape }}</h1>
     <p class="post-info" >Published
-    {% if page.author or site.author -%}
+    {% if author.name or page.author or site.author -%}
       by
-      <span class="post-author" itemscope itemtype="http://schema.org/Person" itemprop="author"><span itemprop="name">{{ page.author | default: site.author }}</span></span>
+      <span class="post-author" itemscope itemtype="http://schema.org/Person" itemprop="author">{%- if author.url -%}<a href="{{ author.url }}">{%- endif -%}<span itemprop="name">{{ author.name | defaut: page.author | default: site.author }}</span>{%- if author.url -%}</a>{%- endif -%}</span>
     {% endif -%}
       at
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: date_format }}</time>
