@@ -1,0 +1,15 @@
+- title: 'Facebook'
+  link: 'https://www.facebook.com/sharer/sharer.php?u='
+  fa: 'fab fa-facebook-f'
+
+- title: 'Twitter'
+  link: 'https://twitter.com/home?status='
+  fa: 'fab fa-twitter'
+
+- title: 'Pinterest'
+  link: 'https://pinterest.com/pin/create/button/?url='
+  fa: 'fab fa-pinterest-p'
+
+- title: 'E-Mail'
+  link: 'mailto?&subject=Read%20this%20link%20I%20found&body='
+  fa: 'far fa-envelope'
