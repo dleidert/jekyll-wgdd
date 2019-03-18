@@ -1,9 +1,11 @@
 /* Core CSS */
 
 $header-z-index: 6000;
-$footer-z-index: $header-z-index;
-$sidebar-z-index: $header-z-index + 2000;
 $main-z-index: $header-z-index - 2000;
+$footer-z-index: $header-z-index;
+$navbar-z-index-hidden: -1;
+$navbar-z-index: $header-z-index + 2000;
+$sidebar-z-index: $main-z-index + 1;
 
 $head-background-color: #f0f0f0; //AliceBlue;
 $page-background-color: rgba(255,255,255,0.8);

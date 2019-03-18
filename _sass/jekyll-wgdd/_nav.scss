@@ -2,8 +2,8 @@ nav.page-navigation-main {
   position: fixed !important;
   top: 0;
   left: 0;
-  padding: $head-padding-top 2*$head-padding-top;
-  z-index: $sidebar-z-index;
+  padding-left: 1px;
+  z-index: $navbar-z-index;
   height: 100%;
   width: 0;
 
@@ -18,8 +18,10 @@ nav.page-navigation-main {
     background: white 10px 10px / 20px 20px no-repeat;
     background-image: -webkit-repeating-linear-gradient(#ccc, #ccc 2px, #fff 2px, #fff 4px);
     background-image: repeating-linear-gradient(#ccc, #ccc 2px, #fff 2px, #fff 4px);
-    z-index: $sidebar-z-index + 1;
+    z-index: $navbar-z-index + 1;
     transition: box-shadow 0.5s ease-in-out;
+    margin-top: $head-padding-top;
+    margin-left: 2*$head-padding-top - 1;
 
     &:hover {
       @extend %header-box-shadow;
@@ -91,6 +93,7 @@ nav.page-navigation-main {
 
     ul.page-navigation-main-list {
       display: block;
+      z-index: $navbar-z-index;
     }
   }
 }
