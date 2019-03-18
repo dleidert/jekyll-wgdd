@@ -90,7 +90,8 @@ description: >
 </xsl:template>
 
 <xsl:template match="blog:title">
-title: <xsl:value-of select="."/>
+title: >
+  <xsl:value-of select="."/>
 </xsl:template>
 
 <xsl:template match="blog:published">
