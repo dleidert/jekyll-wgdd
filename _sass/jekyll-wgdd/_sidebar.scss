@@ -41,6 +41,10 @@ aside.page-side {
       outline: none !important;
     }
 
+    &:focus ~ ul {
+		display: block;
+	}
+
     i {
       display: block;
       font-size: $nav-button-size;
