@@ -63,6 +63,10 @@ nav.page-navigation-main {
           content: "\25bc";
           text-align: right;
         }
+
+        &:focus ~ ul {
+          display: block;
+        }
       }
 
       ul {
