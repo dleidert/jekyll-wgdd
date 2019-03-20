@@ -10,7 +10,9 @@
   z-index: $footer-z-index;
   height: $foot-height;
 
-  button {
+  .page-navigation-footer-open,
+  .page-navigation-footer-close,
+  .page-navigation-footer-title {
     display: none;
   }
 

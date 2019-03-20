@@ -8,7 +8,9 @@
   height: $head-height;
   background-image: linear-gradient($head-background-color, $page-background-color);
 
-  button {
+  .page-navigation-header-open,
+  .page-navigation-header-close,
+  .page-navigation-header-title {
     display: none;
   }
 

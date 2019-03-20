@@ -2,15 +2,21 @@
 
 <nav class="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}"
      aria-labelledby="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-title">
-  <button class="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-title"
-          id="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-title"
+  <span class="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-title"
+        id="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-title"
+        >{%- if include.scope %} {{ include.scope }} {% endif -%}Page Navigation</span>
+  <button class="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-open"
           >Open {%- if include.scope %} {{ include.scope }} {% endif -%}Page Navigation</button>
+  <button class="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-close"
+          >Close {%- if include.scope %} {{ include.scope }} {% endif -%}Page Navigation</button>
 {%- if nav %}
+<div class="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-container">
 <ul id="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-list"
     class="page-navigation{%- if include.scope -%}-{{ include.scope }}{%- endif -%}-list">
 {% for item in nav -%}
 {% include navigation-item.html entry=item -%}
 {% endfor -%}
 </ul>
+</div>
 {%- endif %}
 </nav>
