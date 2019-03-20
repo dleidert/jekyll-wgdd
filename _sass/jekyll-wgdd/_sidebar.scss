@@ -41,9 +41,10 @@ aside.page-side {
       outline: none !important;
     }
 
+    &:active,
     &:focus ~ ul {
-		display: block;
-	}
+      display: block;
+    }
 
     i {
       display: block;
@@ -77,10 +78,6 @@ aside.page-side {
 
       .page-sidebar-button:only-child i {
         color: #ccc;
-      }
-
-      &:focus-within ul {
-        display: block;
       }
 
       span.fa-hide,

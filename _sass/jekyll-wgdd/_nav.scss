@@ -64,6 +64,7 @@ nav.page-navigation-main {
           text-align: right;
         }
 
+        &:active ~ ul,
         &:focus ~ ul {
           display: block;
         }
@@ -72,10 +73,6 @@ nav.page-navigation-main {
       ul {
         display: none;
         background-color: #fff;
-      }
-
-      &:focus-within /*has(> button:active)*/ ul {
-        display: block;
       }
 
       a {
