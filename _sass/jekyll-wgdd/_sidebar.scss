@@ -1,7 +1,7 @@
 aside.page-side {
   position: sticky !important;
   position: -webkit-sticky;
-  top: 5em;
+  top: 5*$head-padding-top + $nav-button-size;
   left: 0;
   float: left;
   margin: 2em 2*$head-padding-top !important;
