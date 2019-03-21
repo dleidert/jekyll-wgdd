@@ -1,5 +1,8 @@
+{%- assign lang = page.lang | default: site.lang | default: "en" -%}
+{%- assign schema = page.schema | default: layout.schema | default: "WebPage" -%}
+
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}" itemscope itemtype="https://schema.org/{%- if page.type -%}{{ page.type }}{%- else -%}WebPage{%- endif -%}">
+<html lang="{{ lang }}" itemscope itemtype="https://schema.org/{{ schema }}">
 
   {% include head.html -%}
 
