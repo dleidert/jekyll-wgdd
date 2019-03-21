@@ -8,17 +8,13 @@
     {% include header.html -%}
 
     {% include page-sidebar.html -%}
-    {% include page-toc.html -%}
 
-    <main class="page-main-content" aria-label="Content" aria-labelledby="page-label" itemprop="mainContentOfPage">
-      <div class="page-main-content-wrapper">
-        {{ content }}
-      </div>
-    </main>
+    {% include page-toc.html type=page.type -%}
+
+    {% include main.html -%}
 
     {% include footer.html -%}
 
   </body>
-
 </html>
 
