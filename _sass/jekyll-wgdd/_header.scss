@@ -1,12 +1,13 @@
 .page-header {
   display: block;
   z-index: $header-z-index;
-  margin: 0;
-  padding: 0;
+  //margin: 5em 0 0 0;
+  padding: $head-padding-top 1em;
   width: 100% !important;
-  position: relative;
-  height: $head-height;
-  background-image: linear-gradient($head-background-color, $page-background-color);
+  height: auto !important;
+  min-height: 15em;
+  background-image: linear-gradient(to left top, $head-background-color, $page-background-color);
+  text-align: center;
 
   .page-navigation-header-open,
   .page-navigation-header-close,
@@ -20,75 +21,52 @@
   }
 
   .page-title {
-    position: absolute;
-    left: 15%;
-    top: 0;
-    width: 250px;
-    text-align: center;
-    font-size: 1.2em; //0.7 * $nav-button-size;
+    font-size: 2em; //0.7 * $nav-button-size;
     font-weight: bold;
-    border: 1px solid $head-background-color;
-    border-top: none;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.2);
-    background-image: linear-gradient($head-background-color, $page-background-color);
-    padding: $head-padding-top;
+    margin-bottom: 2em;
     //transition: box-shadow 0.6s ease-in-out;
 
     &:hover {
-      box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.4);
-      transition: all 0.5s ease-in-out;
+      //box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.4);
+      //transition: all 0.5s ease-in-out;
     }
   }
 
-  ul.page-navigation-header-list {
-    //display: block;
-    overflow: hidden;
-    list-style-type: none;
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: $head-padding-top;
-    //padding-bottom: 10px;
-    //padding-right: 10px;
-    //background-color: $head-background-color;
-    //background-image: linear-gradient($head-background-color, $page-background-color);
-    //width: 100%;
-    text-align: right;
-    height: $head-height;
+  .page-navigation-header {
+    position: relative;
+    //background-image: linear-gradient(to bottom, $head-background-color, $page-background-color);
+    width: 100%;
 
-    li {
-      //float: right;
-      display: inline-block;
-      color: blue;
-      font-size: 0.6 * $nav-button-size;
-      margin: 0 5px;
-      //font-size: 1.2em;
-      //background-image: linear-gradient($head-background-color, $page-background-color);
+    ul.page-navigation-header-list {
+      //border-bottom: 1px solid #ccc;
+      margin: 3em 0;
+      display: block;
+      overflow: hidden;
+      list-style-type: none;
+      text-align: center;
 
-      //img {
-      //  height: 1.2em;
-      //}
+      li {
+        display: inline-block;
+        font-size: 0.6 * $nav-button-size;
+        margin: 0 5px;
+        //font-size: 1.2em;
 
-      a {
-        text-decoration: none;
-        display: block;
-        color: #666;
-        padding: 0.2*$nav-button-size 0.1*$nav-button-size;
+        a {
+          text-decoration: none;
+          display: block;
+          color: #333;
+          padding: 0.2*$nav-button-size 0.1*$nav-button-size;
 
-        &[href*='paypal.me'] {
-          color: white;
-          background-color: limegreen;
-          text-align: center;
-          border: 1px solid $head-background-color;
-        }
+          &[href*='paypal.me'] {
+            color: white;
+            background-color: limegreen;
+            text-align: center;
+          }
 
-        &:hover {
-          @extend %header-box-shadow;
-          text-decoration: underline;
-          transition: all 0.5s ease-in-out;
-          //background-color: red;
-          //color: white;
+          &:hover {
+            transition: all 0.5s ease-in-out;
+            text-decoration: underline;
+          }
         }
       }
     }
