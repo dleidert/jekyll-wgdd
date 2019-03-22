@@ -29,7 +29,7 @@
 
 {%- comment -%} Construct button and begin sublist with parent item {%- endcomment -%}
 {%- if include.entry.sub.size > 0 %}
-<li><button class="page-navigation-sublist">{{- this_title -}}</button>
+<li><button class="page-navigation-sublist">{{- this_title -}}<i class="fas fa-angle-down" style="padding-left: 5px; text-align: right;"></i></button>
 <ul class="page-navigation-sublist">
 {%- endif %}
 {%- comment -%} Construct list entry {%- endcomment %}
