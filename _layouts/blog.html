@@ -3,15 +3,37 @@ layout: default
 schema: Blog
 ---
 
+{%- for cat in page.categories -%}
+{%- assign blogposts = blogposts | concat: site.tags[cat] -%}
+{%- endfor -%}
+{%- assign blogposts = blogposts | uniq | sort: 'date' -%}
+{%- unless blogposts -%}
+{%- assign blogposts = site.posts -%}
+{%- endunless -%}
+
+<!-- {{ blogposts | inspect | jsonify }} -->
+
 <header>
 <!-- pagination navigation -->
 </header>
 
-{% include blog-toc.html %}
+{% for post in site.posts limit:7 -%}
 
-<!-- TODO paginated blog posts as articles -->
-{{ content }}
+<article class="post" aria-labelledby="{{ post.id | slugify: 'pretty' }}"
+         itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" itemid="{{ post.url | absolute_url }}">
+  <header>
+    <h1 class="post-title" id="{{ post.id | slugify: 'pretty' }}" itemprop="headline"><a href="{{ post.url }}">{{ post.title | escape }}</a></h1>
+    <p class="post-author"><span class="post-date">{{ post.date }}</span></p>
+  </header>
+  <div class="post-content">
+    {{ post.content | markdownify }}
+  </div>
+  <footer>
+    <!-- tag list -->
+  </footer>
+</article>
+{% endfor %}
 
-<footer>
-<!-- pagination navigation -->
+<!-- Pagination links -->
+<footer class="blog-footer">
 </footer>
