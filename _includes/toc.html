@@ -21,6 +21,7 @@
             * item_class   (string) :   ''   - add custom class(es) for each list item; has support for '%level%' placeholder, which is the current heading level
             * baseurl      (string) :   ''   - add a base url to the TOC links for when your TOC is on another page than the actual content
             * anchor_class (string) :   ''   - add custom class(es) for each anchor element
+            * truncate     (int)    :   65   - truncate string if necessary *ADDED*
 
         Output:
             An ordered or unordered list representing the table of contents of a markdown block. This snippet will only
@@ -31,6 +32,7 @@
     {% assign orderedList = include.ordered | default: false %}
     {% assign minHeader = include.h_min | default: 1 %}
     {% assign maxHeader = include.h_max | default: 6 %}
+    {% assign truncate = include.truncate | default: 65 %}
     {% assign nodes = include.html | split: '<h' %}
     {% assign firstHeader = true %}
 
@@ -72,7 +74,7 @@
         {% endunless %}
 
         {% capture my_toc %}{{ my_toc }}
-{{ space }}{{ listModifier }} {{ listItemClass }} [{% if include.sanitize %}{{ header | strip_html }}{% else %}{{ header }}{% endif %}]({% if include.baseurl %}{{ include.baseurl }}{% endif %}#{{ html_id }}){% if include.anchor_class %}{:.{{ include.anchor_class }}}{% endif %}{% endcapture %}
+{{ space }}{{ listModifier }} {{ listItemClass }} [{% if include.sanitize %}{{ header | strip_html | truncate: truncate }}{% else %}{{ header | truncate: truncate }}{% endif %}]({% if include.baseurl %}{{ include.baseurl }}{% endif %}#{{ html_id }} "{% if include.sanitize %}{{ header | strip_html }}{% else %}{{ header }}{% endif %}"){% if include.anchor_class %}{:.{{ include.anchor_class }}}{% endif %}{% endcapture %}
     {% endfor %}
 
     {% if include.class %}
