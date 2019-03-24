@@ -1,10 +1,22 @@
 <header class="page-header" id="page-label" aria-label="Page title">
 
-<div class="page-title" id="page-title"><a href="{{ site.url | absolute_url }}"><span>{{ site.title }}</span></a></div>
+<div class="page-title" id="page-title">
+<span class="page-title-label">
+<a href="{{ site.url | absolute_url }}" title="{{ site.title }}"><i class="fas fa-home"></i>
+</a>
+</span>
 
 {% if site.data.navigation["header"] %}
 {% include navigation.html scope="header" %}
 {% endif %}
+</div>
+
+<div class="page-description" id="page-description">
+<span class="page-description">{{ page.title | default: site.description }}</span><!-- strip_html? -->
+</div>
+<div class="page-excerpt" id="page-excerpt">
+<span class="page-excerpt">{{ page.excerpt | default: site.excerpt }}</span>
+</div>
 
 </header>
 
