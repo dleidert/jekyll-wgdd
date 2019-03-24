@@ -15,8 +15,7 @@ main:
     title: bde-lock
   - url: https://dleidert.github.io/jekyll-wgdd/
     title: Jekyll theme
-- url: about.md
-  title: About
+- title: About
   sub:
   - url: /about/#about-me
     title: About me
