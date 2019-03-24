@@ -1,7 +1,11 @@
 remote_theme: dleidert/jekyll-wgdd
 
 title: "[erfahrungen, meinungen, halluzinationen]"
-description: "ein kleines, privates blog"
+description: "ein kleines, privates Blog"
+excerpt: >
+  A private site with contents about myself, my daily Debian usage and
+  contributions, my hobbies like aquaristics, photography, mushrooms,
+  environmental protection and general thoughts about daily life.
 lang: en
 
 show_excerpts: false
