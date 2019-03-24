@@ -1,7 +1,7 @@
 main:
 - url: index.md
   title: Home
-- url: debian.md
+- url: debian/index.md
   sub:
   - url: debian/blog.md
   - url: debian/packages.md
