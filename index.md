@@ -1,8 +1,9 @@
 ---
 layout: page
-title: Index
 description: >
-  Site description
+ A private site with contents about myself, my daily Debian usage and
+ contributions, my hobbies like aquaristics, photography, mushrooms,
+ environmental protection and general thoughts about daily life.
 ---
 
 # Header 1
