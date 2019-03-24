@@ -29,23 +29,21 @@
 
 {%- comment -%} Construct button and begin sublist with parent item {%- endcomment -%}
 {%- if include.entry.sub.size > 0 %}
-<li><button class="page-navigation-sublist">{{- this_title -}}<i class="fas fa-angle-down" style="padding-left: 5px; text-align: right;"></i></button>
-<ul class="page-navigation-sublist">
+<li role="none"><button class="page-navigation-sublist" aria-haspopup="true">{{- this_title -}}<i class="fas fa-angle-down"></i></button>
+<ul class="page-navigation-sublist" role="menu" aria-modal="true">
 {%- endif %}
-{%- comment -%} Construct list entry {%- endcomment %}
-<li {%- if this_url == page.url %} active{%- endif -%}>
+{%- comment -%} Construct first list entry if it not just a title {%- endcomment %}
 {%- if this_url -%}
-<a href="{{- this_url -}}">
-{%- endif -%}
+<li role="none" {%- if this_url == page.url %} aria-current="page" class="active"{%- endif -%}>
+<a role="menuitem" href="{{- this_url -}}">
 {%- if include.entry.img -%}
 <img src="{{- include.entry.img -}}" alt="{{- this_title -}}">
 {%- else -%}
 {{- this_title -}}
 {%- endif -%}
-{%- if this_url -%}
 </a>
-{%- endif -%}
 </li>
+{%- endif -%}
 {%- comment -%} Construct sublist entries {%- endcomment -%}
 {%- if include.entry.sub.size > 0 %}
 {%- for sub in include.entry.sub -%}
