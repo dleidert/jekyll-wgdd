@@ -91,16 +91,19 @@ nav.page-navigation-main {
             content: "\25bc";
             text-align: right;
           }
-
-          &:active ~ ul,
-          &:focus ~ ul {
-            display: block;
-          }
         }
 
         ul {
           display: none;
           background-color: #fff;
+        }
+
+        &:focus-within ul {
+          display: block;
+        }
+
+        &[focus-within] {
+          display: block;
         }
 
         a {

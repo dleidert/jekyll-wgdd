@@ -21,4 +21,6 @@
   {% if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif %}
+  <script src="https://unpkg.com/focus-within/browser"></script>
+  <script>focusWithin(document)</script>
 </head>

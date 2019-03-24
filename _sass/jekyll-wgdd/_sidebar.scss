@@ -35,17 +35,6 @@ aside.page-side {
     padding: 0;
     margin: 0;
 
-    &:active,
-    &:focus {
-      border: none !important;
-      outline: none !important;
-    }
-
-    &:active,
-    &:focus ~ ul {
-      display: block;
-    }
-
     i {
       display: block;
       font-size: $nav-button-size;
@@ -74,6 +63,14 @@ aside.page-side {
           color: $fa-icon-color;
           opacity: 0.5;
         }
+      }
+
+      &:focus-within ul {
+        display: block;
+      }
+
+      &[focus-within] ul {
+        display: block;
       }
 
       .page-sidebar-button:only-child i {
