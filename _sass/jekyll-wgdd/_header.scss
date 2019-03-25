@@ -2,17 +2,19 @@
   position: relative;
   display: -webkit-flex;
   -webkit-flex-direction: column;
+  -webkit-flex-wrap: nowrap;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   z-index: $header-z-index;
-  //margin: 5em 0 0 0;
-  padding: $head-padding-top 1em;
+  padding: $head-padding-top 2*$head-padding-top;
   width: 100% !important;
-  //width: 100vw;
-  height: 75vh !important;
   background-image: linear-gradient(to left top, $head-background-color, $page-background-color);
   text-align: center;
+
+  @media (min-width: 600px) {
+    height: 75vh !important;
+  }
 
   a {
     text-decoration: none;
@@ -31,7 +33,7 @@
 
     .page-title-label {
       float: left;
-      margin-left: $nav-button-size + 2*$nav-button-padding + 5px;
+      margin-left: 2*$nav-button-padding + $nav-button-size + 5px;
 
       .fa-home {
         display: block;
@@ -41,7 +43,6 @@
 
     .page-navigation-header {
       float: right;
-      margin-right: 2*$nav-button-size + 4*$nav-button-padding + 10px;
       //background-image: linear-gradient(to bottom, $head-background-color, $page-background-color);
 
       .page-navigation-header-control,
@@ -50,18 +51,35 @@
       }
 
       ul.page-navigation-header-list {
-        //border-bottom: 1px solid #ccc;
-        margin-bottom: 3em;
-        display: block;
+        margin-bottom: 1em;
+        display: block; /* fallback */
+        display: -webkit-flex;
+        -webkit-flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         overflow: hidden;
         list-style-type: none;
         text-align: right;
+        max-width: 80vw;
 
-        li {
+        @media (max-width: 400px) {
+          -webkit-flex-direction: column;
+          -webkit-flex-wrap: nowrap;
+          flex-direction: column;
+          flex-wrap: nowrap;
+        }
+
+        > li {
           display: inline-block;
           font-size: 0.6 * $nav-button-size;
           margin: 0 5px;
-          //font-size: 1.2em;
+          flex: auto;
+
+          @media (max-width: 400px) {
+            border-bottom: 1px solid #ccc;
+          }
 
           a {
             padding: 0.2*$nav-button-size 0.1*$nav-button-size;
@@ -75,24 +93,18 @@
         }
       }
     }
-
-    &:after {
-      content: "";
-      display: column;
-      clear: both;
-    }
   }
 
   .page-description {
     display: block;
-    padding: 1rem 5vw 2rem 0;
+    padding: 1rem 1vw 2rem 0;
     font-size: 3rem;
     text-align: right;
   }
 
   .page-excerpt {
     display: block;
-    padding: 0 5vw 1rem 5vw;
+    padding: 0 1vw 1rem 5vw;
     font-size: 1.6rem;
     text-align: left;
   }
