@@ -28,6 +28,8 @@
   }
 
   .page-title {
+    position: sticky;
+    top: $nav-button-padding;
     display: block;
     flex-grow: 2;
 
@@ -97,7 +99,7 @@
 
   .page-description {
     display: block;
-    padding: 1rem 1vw 2rem 0;
+    padding: 0 1vw 1.8rem 0;
     font-size: 3rem;
     text-align: right;
   }
