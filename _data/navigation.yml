@@ -1,12 +1,12 @@
 main:
 - url: index.md
   title: Home
-- url: debian/index.md
+- url: _debian/index.md
   sub:
-  - url: debian/blog.md
-  - url: debian/packages.md
+  - url: _debian/blog.md
+  - url: _debian/packages.md
     title: My Packages
-  - url: debian/hardware.md
+  - url: _debian/hardware/index.md
     title: My Hardware
 - url: projects.md
   title: My projects
