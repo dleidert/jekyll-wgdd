@@ -28,6 +28,7 @@
   }
 
   .page-title {
+    position: -webkit-sticky;
     position: sticky;
     top: $nav-button-padding;
     display: block;
