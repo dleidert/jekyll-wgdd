@@ -10,6 +10,10 @@ aside.page-toc {
   border-radius: 10px;
   background-color: $nav-background-color;
 
+  @media (max-width: 400px) {
+    display: none;
+  }
+
   &:hover {
     @extend %header-box-shadow;
     transition: 0.3s;

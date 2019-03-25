@@ -7,7 +7,7 @@
   flex-direction: column;
   flex-wrap: nowrap;
   z-index: $header-z-index;
-  padding: $head-padding-top 2*$head-padding-top;
+  padding: $head-padding-top 2*$head-padding-top 0 2*$nav-button-padding + $nav-button-size;
   width: 100% !important;
   background-image: linear-gradient(to left top, $head-background-color, $page-background-color);
   text-align: center;
@@ -28,15 +28,23 @@
   }
 
   .page-title {
-    position: -webkit-sticky;
-    position: sticky;
-    top: $nav-button-padding;
     display: block;
     flex-grow: 2;
 
+    @media (min-width: 800px) {
+      position: -webkit-sticky;
+      position: sticky;
+      top: $nav-button-padding;
+    }
+
     .page-title-label {
       float: left;
-      margin-left: 2*$nav-button-padding + $nav-button-size + 5px;
+      margin-left: 2*$nav-button-padding;
+
+      @media (max-width: 600px) {
+        float: right;
+        margin-right: $nav-button-padding;
+      }
 
       .fa-home {
         display: block;
@@ -100,14 +108,14 @@
 
   .page-description {
     display: block;
-    padding: 0 1vw 1.8rem 0;
+    padding: 0 1vw 1.7rem 0;
     font-size: 3rem;
     text-align: right;
   }
 
   .page-excerpt {
     display: block;
-    padding: 0 1vw 1rem 5vw;
+    padding: 0 1vw 1rem 0;
     font-size: 1.6rem;
     text-align: left;
   }
