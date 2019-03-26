@@ -14,7 +14,7 @@
         <button class="page-sidebar-button" title="Open Share Links"><i class="fas fa-share"></i></button>
         <ul>
           {%- for res in site.data.shares -%}
-          <li><a href="{{ res.link }}{{ site.baseurl | url_encode }}" title="Share on {{ res.title }}"><i class="{{ res.fa }}"></i><span class="fa-hide"></a></li>
+          <li><a href="{{ res.link }}{{ site.url | absolute_url | url_encode }}" title="Share on {{ res.title }}"><i class="{{ res.fa }}"></i><span class="fa-hide"></a></li>
           {%- endfor -%}
         </ul>
       </li>
