@@ -11,10 +11,10 @@ categories:
 
 # Beeblebrox
 
-I bought [this model](https://www.lenovo.com/us/en/laptops/lenovo/student-chromebooks/ThinkPad-Yoga-11e-Chromebook-4th-Gen/p/22TP2TX153E20HY "") in Dezember 2016 as a used device for around 400 Euros. It came with a pre-installed Windows 8, a 128 GB SSD - which I changed for a 256GB Samsung EVO 850 - and 8 GB of RAM. The remaining hardware is mainly based on Intel. The brilliant 11.6 inch display has touch capability and flexible 360 degree hinches. This is an output of `lspci` as of the time of writing:
+I bought [this 4th gen. Lenovo Thinkpad model](https://www.lenovo.com/us/en/laptops/lenovo/student-chromebooks/ThinkPad-Yoga-11e-Chromebook-4th-Gen/p/22TP2TX153E20HY "Manufacturer information about the Lenovo Thinkpad Yoga 11e notebook") in Dezember 2016 as a used device for around 400 Euros. It came with a pre-installed Windows 8, a 128 GB SSD - which I changed for a 256GB Samsung EVO 850 - and 8 GB of RAM. The remaining hardware is mainly based on Intel. The brilliant 11.6 inch display has touch capability and flexible 360 degree hinches. This is an output of `lspci` as of the time of writing:
 
-````shell{: title='output of lspci without partition information'}
-# hwinfo --short
+```shell
+$ hwinfo --short
 cpu:                                                            
                        Intel(R) Celeron(R) CPU  N2930  @ 1.83GHz, 700 MHz
                        Intel(R) Celeron(R) CPU  N2930  @ 1.83GHz, 603 MHz
@@ -70,21 +70,34 @@ unknown:
                        Intel Atom Processor Z36xxx/Z37xxx Series Trusted Execution Engine
   /dev/ttyS0           16550A
   /dev/input/event9    Acer Integrated Camera
-````
+```
+{: title='output of lspci without partition information'}
 
-The installation of Debian worked like a charme using a [netinst ISO](https://www.debian.org/CD/netinst/) on a USB devive. After the procedure finished successfully, I've upgraded the system to Debian Sid (as I always do with my workstations) and installed these packages providing (free and non-free) firmware support:
+The installation of Debian worked like a charme using a [netinst ISO](https://www.debian.org/CD/netinst/) on a USB devive. After the procedure finished successfully, I've upgraded the system to Debian Sid (as I always do with my workstations).
 
-````shell
-apt-get install firmware-linux firmware-linux-free firmware-linux-nonfree \
-                firmware-intel-sound firmware-iwlwifi firmware-realtek \
-                intel-microcode
-````
+## Installed packages
+
+The following packages are installed providing (free and non-free) firmware support:
+
+```shell
+firmware-linux
+firmware-linux-free
+firmware-linux-nonfree
+firmware-intel-sound
+firmware-iwlwifi
+firmware-realtek
+intel-microcode
+```
 
 Also these packages are installed:
 
 ````shell
-libdrm-intel1 xserver-xorg-input-all xserver-xorg-video-intel xserver-xorg-input-synaptics i965-va-driver
+libdrm-intel1
+xserver-xorg-input-all
+xserver-xorg-input-synaptics
+xserver-xorg-video-intel
+i965-va-driver
 ````
 
-With these packages installed, everything works out of the box. No special configuration is required.
-Because the hardware is mainly Intel based, things work out of the box
+Because the hardware is mostly Intel based, everything works out of the box.
+No special configuration is required.
