@@ -90,9 +90,10 @@ nav.page-navigation-main {
         display: block;
         //align-content: space-between;
         flex: auto;
-        max-width: 25%;
+        max-width: 20%;
         height: auto;
         font-weight: bold;
+        margin: 10px 10px 0 0;
 
         @media (max-width: 800px) {
           max-width: 50%;
