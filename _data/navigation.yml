@@ -1,15 +1,10 @@
 main:
 - url: index.md
   title: Home
-- url: _debian/index.md
-  sub:
-  - url: _debian/blog.md
-  - url: _debian/packages.md
-    title: My Packages
-  - url: _debian/hardware/index.md
-    title: My Hardware
 - url: projects.md
   title: My projects
+- collection: debian
+  title: Debian
   sub:
   - url: https://dleidert.github.io/bde-lock/
     title: bde-lock
