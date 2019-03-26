@@ -40,7 +40,10 @@
 {%- if include.entry.img -%}
 <img src="{{- include.entry.img -}}" alt="{{- this_title -}}">
 {%- else -%}
-{{- this_title -}}
+{%- if include.entry.aws_icon or this_page.aws_icon -%}
+<i class="{{ this_page.aws_icon | default: include.entry.aws_icon }}" title="{{- this_title -}}"></i>
+{%- endif -%}
+<span class="no-fa">{{- this_title -}}</span>
 {%- endif -%}
 </a>
 </li>
@@ -56,6 +59,7 @@
 
 {%- else -%}
 {%- assign col = site.[include.entry.collection] | sort: 'path' -%}
+{%- assign col_title = site.collections | where: "label", include.entry.collection | map: 'title' -%}
 {%- comment -%}
 
     Handle collections
@@ -63,7 +67,7 @@
 {%- endcomment -%}
 
 <li role="none">
-<button class="page-navigation-sublist" aria-haspopup="true">{{- include.entry.title | default: col.title | default: 'Unknown' -}}<i class="fas fa-angle-down"></i></button>
+<button class="page-navigation-sublist" aria-haspopup="true">{{- include.entry.title | default: col_title | default: 'Unknown' -}}<i class="fas fa-angle-down"></i></button>
 <ul class="page-navigation-sublist" role="menu" aria-modal="true">
 {% for item in col -%}
 <li role="none" {%- if item.url == page.url %} aria-current="page" class="active"{%- endif -%}><a role="menuitem" href="{{- item.url -}}">{%- if item.image -%}<img src="{{- item.image -}}" alt="{{- item.title -}}">{%- else -%}{{- item.title -}}{%- endif -%}</a></li>
