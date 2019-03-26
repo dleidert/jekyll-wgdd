@@ -30,6 +30,10 @@ jekyll_wgdd:
 
 collections:
   legals:
+  debian:
+    title: 'My Debian'
+    output: true
+    permalink: /debian/:path
   authors:
     output: true
     permalink: /about/:name/
