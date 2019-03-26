@@ -1,5 +1,5 @@
 ---
 layout: page
-title: Acer Aspire 7 (A717-71G)
+title: Debian on Acer Aspire 7 (A717-71G)
 ---
 

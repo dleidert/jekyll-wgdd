@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Debian on a Lenovo Thinkpad Yoga 11e
+title: Debian on Lenovo Thinkpad Yoga 11e
 description: >
  Install and use Debian Sid on a Lenovo Thinkpad Yoga 11e, a small 11.6 inch
  Intel based notebook with long battery duration and touch capability.

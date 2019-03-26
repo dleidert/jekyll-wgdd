@@ -1,4 +1,4 @@
 ---
 layout: page
-title: HP N54L
+title: Debian on HP N54L
 ---
