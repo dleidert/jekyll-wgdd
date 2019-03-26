@@ -1,10 +1,9 @@
 main:
 - url: index.md
   title: Home
-- url: projects.md
-  title: My projects
 - collection: debian
   title: Debian
+- title: My projects
   sub:
   - url: https://dleidert.github.io/bde-lock/
     title: bde-lock
