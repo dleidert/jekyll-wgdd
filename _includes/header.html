@@ -12,10 +12,10 @@
 </div>
 
 <div class="page-description" id="page-description">
-<span class="page-description">{{ page.title | default: site.description }}</span><!-- strip_html? -->
+<span class="page-description">{{ page.title | default: site.title }}</span><!-- strip_html? -->
 </div>
 <div class="page-excerpt" id="page-excerpt">
-<span class="page-excerpt">{{ page.excerpt | default: site.excerpt }}</span>
+<span class="page-excerpt">{{ page.description | default: site.description }}</span>
 </div>
 
 </header>
