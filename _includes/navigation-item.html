@@ -3,9 +3,10 @@
 {%- assign this_url   = nil -%}
 {%- assign this_title = nil -%}
 
-{%- comment -%} If include.entry.url==nil ... thispage = site.pages! {%- endcomment -%}
+{%- unless include.entry.collection -%}
+
+{%- comment -%} If include.entry.url==nil ... site.pages is returned in where condition! {%- endcomment -%}
 {%- if include.entry.url -%}
-  {%- comment -%}If include.entry.url==nil ... thispage = site.pages!{%- endcomment -%}
   {%- assign this_page = site.pages | where: "path", include.entry.url | first -%}
 {%- endif -%}
 
@@ -52,3 +53,24 @@
 </ul>
 </li>
 {%- endif -%}
+
+{%- else -%}
+{%- assign col = site.[include.entry.collection] | sort: 'path' -%}
+{%- comment -%}
+
+    Handle collections
+
+{%- endcomment -%}
+
+<li role="none">
+<button class="page-navigation-sublist" aria-haspopup="true">{{- include.entry.title | default: col.title | default: 'Unknown' -}}<i class="fas fa-angle-down"></i></button>
+<ul class="page-navigation-sublist" role="menu" aria-modal="true">
+{% for item in col -%}
+<li role="none" {%- if item.url == page.url %} aria-current="page" class="active"{%- endif -%}><a role="menuitem" href="{{- item.url -}}">{%- if item.image -%}<img src="{{- item.image -}}" alt="{{- item.title -}}">{%- else -%}{{- item.title -}}{%- endif -%}</a></li>
+{% endfor -%}
+</ul>
+</li>
+
+
+
+{%- endunless -%}
