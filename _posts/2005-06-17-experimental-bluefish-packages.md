@@ -10,6 +10,7 @@ description: >
   Experimental Debian packages added to debian.wgdd.de for bluefish from upstream CVS.
 categories:
 - debian
+- repository
 tags:
 - bluefish
 - software

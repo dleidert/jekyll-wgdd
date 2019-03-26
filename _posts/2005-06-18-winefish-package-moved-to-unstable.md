@@ -10,6 +10,7 @@ description: >
   Updated Debian packages for winefish 1.2.0.
 categories:
 - debian
+- repository
 tags:
 - software
 - debian
