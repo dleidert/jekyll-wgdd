@@ -2,7 +2,6 @@ main:
 - url: index.md
   title: Home
 - collection: debian
-  title: Debian
 - title: My projects
   sub:
   - url: https://dleidert.github.io/bde-lock/
@@ -19,12 +18,16 @@ main:
 header:
 - url: blog.md
   title: Blog
+  aws_icon: 'fas fa-blog'
 - url: projects.md
   title: Software
+  aws_icon: 'fas fa-code'
 - url: about.md
   title: About me
+  aws_icon: 'fas fa-user'
 - url: https://www.paypal.me/dleidert/
   title: Support via PayPal
+  aws_icon: 'fab fa-paypal'
   #img: https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg
 
 footer:
