@@ -41,7 +41,7 @@
       float: left;
       margin-left: 2*$nav-button-padding;
 
-      @media (max-width: 600px) {
+      @media (max-width: 700px) {
         float: right;
         margin-right: $nav-button-padding;
       }
@@ -99,6 +99,17 @@
               color: white;
               background-color: limegreen;
               text-align: center;
+            }
+
+            .fa,
+            .fab,
+            .fas {
+              visibility: hidden;
+
+              @media (min-width: 800px) {
+                padding-right: 0.5rem;
+                visibility: visible;
+              }
             }
           }
         }
