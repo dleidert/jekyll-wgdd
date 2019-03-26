@@ -34,16 +34,16 @@
 <ul class="page-navigation-sublist" role="menu" aria-modal="true">
 {%- endif %}
 {%- comment -%} Construct first list entry if it not just a title {%- endcomment %}
-{%- if this_url -%}
+{%  if this_url -%}
 <li role="none" {%- if this_url == page.url %} aria-current="page" class="active"{%- endif -%}>
-<a role="menuitem" href="{{- this_url -}}">
+<a role="menuitem" href="{{- this_url -}}" title="{{- this_title -}}">
 {%- if include.entry.img -%}
 <img src="{{- include.entry.img -}}" alt="{{- this_title -}}">
 {%- else -%}
 {%- if include.entry.aws_icon or this_page.aws_icon -%}
-<i class="{{ this_page.aws_icon | default: include.entry.aws_icon }}" title="{{- this_title -}}"></i>
+<i class="{{ this_page.aws_icon | default: include.entry.aws_icon }}" aria-hidden="true"></i>
 {%- endif -%}
-<span class="no-fa">{{- this_title -}}</span>
+{{- this_title -}}
 {%- endif -%}
 </a>
 </li>
